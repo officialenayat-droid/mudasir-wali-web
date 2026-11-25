@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Expand, X } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
-import { GALLERY } from "../data/gallery";
+import { GALLERY, VIDEOS } from "../data/gallery";
 import { Section } from "./Section";
 
 export function Gallery() {
@@ -33,6 +33,30 @@ export function Gallery() {
 
   return (
     <Section id="gallery" eyebrow={t.gallery.eyebrow} title={t.gallery.title} tone="white">
+      <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-slate-600">{t.gallery.videos}</h3>
+      <ul className="mb-12 grid grid-cols-2 items-start gap-3 sm:gap-4 md:grid-cols-4">
+        {VIDEOS.map((v, i) => (
+          <li key={v.src} className={i === 0 ? "col-span-2" : ""}>
+            <figure>
+              <video
+                controls
+                playsInline
+                preload="none"
+                poster={v.poster}
+                width={v.w}
+                height={v.h}
+                style={{ aspectRatio: `${v.w} / ${v.h}` }}
+                className="w-full rounded-2xl bg-ink object-cover"
+                aria-label={v[lang]}
+              >
+                <source src={v.src} type="video/mp4" />
+              </video>
+              <figcaption className="mt-2 text-sm text-slate-600">{v[lang]}</figcaption>
+            </figure>
+          </li>
+        ))}
+      </ul>
+      <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-slate-600">{t.gallery.photos}</h3>
       <ul className="columns-2 gap-3 sm:gap-4 md:columns-3 [&>li]:mb-3 sm:[&>li]:mb-4">
         {GALLERY.map((p, i) => (
           <li key={p.src} className="break-inside-avoid">
