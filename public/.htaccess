@@ -1,0 +1,27 @@
+# Apache / LiteSpeed (Hostinger): serve the single-page app for client routes like /connect.
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# Redirect www and http to https://mudasirwali.in
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Existing files and folders are served as-is; everything else goes to index.html
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^ index.html [L]
+
+# Long cache for hashed assets and photos
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|webp|jpg|png|svg|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "index\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

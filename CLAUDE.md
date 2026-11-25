@@ -6,7 +6,8 @@ Mobile-first political/public-leadership site for Mudasir Wali (Joint Secretary,
 - React 19 + TypeScript 5.9 + Vite 8, React Router 7 (`/` home, `/connect` link-in-bio)
 - Tailwind CSS v4 via `@tailwindcss/vite` — tokens live in `src/index.css` `@theme`
 - Lucide icons (brand glyphs: `src/components/icons.tsx`)
-- Static SPA; `vercel.json` / `public/_redirects` rewrite all routes to `index.html`
+- Static SPA. Routing fallbacks: `public/.htaccess` (Hostinger/Apache), `vercel.json` (Vercel), `public/_redirects` (Netlify)
+- `robots.txt` / `sitemap.xml` are generated at build time from `VITE_SITE_URL` (see `vite.config.ts`); host env vars override `.env`
 
 ## Commands
 - `npm run dev` — dev server
@@ -34,7 +35,7 @@ Colours are the J&K Apni Party flag (red / white / blue). Shared utilities: `btn
 - `index.html` — SEO meta, OpenGraph, JSON-LD (`Person`, `PoliticalParty`, `Organization`, `WebSite`)
 - `public/photos/` — WebP photos (≤1200px) used by `src/data/gallery.ts`, pillars and press notes; `portrait.webp` is the main portrait (confirmed by the client: photo 2 of the supplied set)
 - `public/brand/` — official J&K Apni Party flag (client-supplied); use via `<PartyFlag>` / `<FlagStripe>` in `src/components/PartyFlag.tsx` (header, hero, About party card, footer, /connect, share image)
-- `public/` — `portrait.jpg` (JSON-LD image), `og-image.jpg` (1200×630 share card), `robots.txt`, `sitemap.xml`
+- `public/` — `portrait.jpg` (JSON-LD image), `og-image.jpg` (1200×630 share card), `.htaccess`
 
 ## Rules
 - Political agenda only (client decision): no road-safety, KRSF or community/religious-service content. The About bio/mission/vision (`t.about` in strings.ts) is the client's own text — keep it verbatim. His scope is Kashmir-wide; his post is Joint Secretary, Srinagar. The KRSF "Director, Public Relations" role is deliberately omitted unless the client asks. His title is "Joint Secretary, District Srinagar" — never "Youth Wing".
@@ -45,4 +46,4 @@ Colours are the J&K Apni Party flag (red / white / blue). Shared utilities: `btn
 - Facts only. No invented quotes, dates, statistics or media coverage. Ward "on the ground" items and press notes must be verifiable.
 - Forms never store data; they build a WhatsApp message (`src/lib/whatsapp.ts`). Ticket IDs: `MW-SRN-<year>-<4 chars>`.
 - Use logical CSS properties (`ms-`, `pe-`, `start-`, `text-start`) so RTL works; flip directional icons with `rtl:-scale-x-100`.
-- If the domain changes, update `.env`, `public/robots.txt`, `public/sitemap.xml`.
+- Domain: production is `https://mudasirwali.in` (Hostinger, set via the host's `VITE_SITE_URL`). If the domain changes, update the host env var and `.env`.
