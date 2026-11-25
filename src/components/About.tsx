@@ -35,7 +35,7 @@ export function About() {
             <p className="mt-4 font-serif text-2xl leading-snug sm:text-3xl">{a.missionText}</p>
           </article>
           <article className="rounded-3xl bg-forest p-7 text-paper sm:p-8">
-            <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-gold">
+            <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-amber-300">
               <Compass className="size-4" aria-hidden="true" /> {a.vision}
             </h3>
             <p className="mt-4 font-serif text-2xl leading-snug sm:text-3xl">{a.visionText}</p>

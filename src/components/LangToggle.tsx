@@ -7,7 +7,7 @@ export function LangToggle({ className = "" }: { className?: string }) {
     <button
       type="button"
       onClick={toggle}
-      aria-label={lang === "en" ? "Switch to Urdu" : "Switch to English"}
+      aria-label={`${t.langToggle} — ${lang === "en" ? "Switch to Urdu" : "Switch to English"}`}
       className={`inline-flex min-h-10 items-center gap-1.5 rounded-full border border-current/25 px-3.5 text-sm font-semibold transition hover:border-current ${className}`}
     >
       <Languages className="size-4" aria-hidden="true" />

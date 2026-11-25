@@ -51,13 +51,13 @@
   @apply btn bg-forest text-white hover:bg-forest-deep;
 }
 @utility btn-gold {
-  @apply btn bg-gold text-white hover:bg-amber-700;
+  @apply btn bg-amber-700 text-white hover:bg-amber-800;
 }
 @utility btn-ghost {
   @apply btn border border-current;
 }
 @utility eyebrow {
-  @apply text-xs font-bold uppercase tracking-[0.2em] text-gold;
+  @apply text-xs font-bold uppercase tracking-[0.2em] text-amber-700;
 }
 
 /* Unlayered so it beats the font-serif utility when Urdu is active. */

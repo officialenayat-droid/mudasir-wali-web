@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, Check, ClipboardCopy, Newspaper, X } from "lucide-react";
+import { ArrowUpRight, Check, ClipboardCopy, ExternalLink, Newspaper, X } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import { PRESS_NOTES, formatPressNote, type PressNote } from "../data/press";
 import { SITE } from "../config/site";
@@ -54,6 +54,7 @@ export function PressRoom() {
           <h3 className="mt-5 font-serif text-3xl leading-tight sm:text-4xl">{lead.title}</h3>
           <p className="mt-4 text-lg text-slate-600">{lead.dek}</p>
           <p className="mt-4 leading-relaxed text-slate-700" lang="en">{lead.body[0]}</p>
+          <Sources note={lead} />
           <div className="mt-auto flex flex-wrap gap-3 pt-8">
             <button type="button" className="btn-ghost text-ink hover:bg-ink hover:text-paper" onClick={() => setActive(lead)}>
               {t.press.read} <ArrowUpRight className="size-4 rtl:-scale-x-100" aria-hidden="true" />
@@ -70,6 +71,7 @@ export function PressRoom() {
               </button>
             </h3>
             <p className="mt-2 text-sm text-slate-400">{n.dek}</p>
+            <Sources note={n} dark />
           </article>
         ))}
       </div>
@@ -99,6 +101,7 @@ export function PressRoom() {
               <div className="mt-8 space-y-5 text-[17px] leading-relaxed text-slate-800">
                 {active.body.map((p) => <p key={p}>{p}</p>)}
               </div>
+              <Sources note={active} />
               <p className="mt-10 border-t border-slate-200 pt-5 text-sm text-slate-500">
                 Issued by the Office of Mudasir Wali, Joint Secretary, District Srinagar, J&amp;K Apni Party · Instagram @{SITE.instagram}
               </p>
@@ -110,6 +113,20 @@ export function PressRoom() {
         )}
       </dialog>
     </Section>
+  );
+}
+
+function Sources({ note, dark = false }: { note: PressNote; dark?: boolean }) {
+  if (!note.sources?.length) return null;
+  return (
+    <p className={`mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm ${dark ? "text-slate-400" : "text-slate-500"}`}>
+      <span>As reported by</span>
+      {note.sources.map((s) => (
+        <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" className={`relative z-10 inline-flex items-center gap-1 font-semibold underline-offset-4 hover:underline ${dark ? "text-paper" : "text-forest"}`}>
+          {s.name} <ExternalLink className="size-3" aria-hidden="true" />
+        </a>
+      ))}
+    </p>
   );
 }
 

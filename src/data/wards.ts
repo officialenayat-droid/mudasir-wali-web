@@ -25,7 +25,8 @@ export const WARDS: Ward[] = [
     tagline: { en: "Constituency delegation", ur: "حلقہ جاتی وفد" },
     focus: ["roads", "drainage", "water-power", "employment"],
     onGround: [
-      { en: "Led a public delegation flagging civic grievances of the Hazratbal constituency.", ur: "حلقہ حضرت بل کے شہری مسائل اٹھانے کے لیے عوامی وفد کی قیادت کی۔" },
+      { en: "Nov 2026 — part of the Apni Party delegation from Hazratbal that raised residents' grievances with party president Altaf Bukhari.", ur: "نومبر ۲۰۲۶ — حضرت بل کے اپنی پارٹی وفد میں شامل جس نے پارٹی صدر الطاف بخاری کے سامنے عوامی مسائل اٹھائے۔" },
+      { en: "Jul 2026 — present at the Apni Party workers' convention at Hazratbal.", ur: "جولائی ۲۰۲۶ — حضرت بل میں اپنی پارٹی کارکنوں کے کنونشن میں شرکت۔" },
     ],
   },
   {

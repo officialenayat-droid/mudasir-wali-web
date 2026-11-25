@@ -38,6 +38,8 @@ Shared utilities: `btn`, `btn-primary`, `btn-gold`, `btn-ghost`, `field`, `label
 ## Rules
 - Political agenda only (client decision): no road-safety, KRSF or community/religious-service content. The About bio/mission/vision (`t.about` in strings.ts) is the client's own text — keep it verbatim. His scope is Kashmir-wide; his post is Joint Secretary, Srinagar. The KRSF "Director, Public Relations" role is deliberately omitted unless the client asks. His title is "Joint Secretary, District Srinagar" — never "Youth Wing".
 - Photo captions describe the event only. Never name anyone in a photo unless the client has confirmed who they are.
+- Hazratbal delegation (14 Nov 2026) was led by Mohammad Sidiq Mir; Mudasir Wali was a member — never say he led it. Press notes should carry `sources` links to published coverage.
+- Text colour: use `amber-700` for gold text on light backgrounds and `amber-300/400` on dark green/ink (`#D97706` fails WCAG contrast on both).
 - Facts only. No invented quotes, dates, statistics or media coverage. Ward "on the ground" items and press notes must be verifiable.
 - Forms never store data; they build a WhatsApp message (`src/lib/whatsapp.ts`). Ticket IDs: `MW-SRN-<year>-<4 chars>`.
 - Use logical CSS properties (`ms-`, `pe-`, `start-`, `text-start`) so RTL works; flip directional icons with `rtl:-scale-x-100`.

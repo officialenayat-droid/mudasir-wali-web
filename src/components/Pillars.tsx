@@ -6,9 +6,9 @@ import { Section } from "./Section";
 
 const META: Record<PillarId, { icon: LucideIcon; span: string; tone: string; accent: string }> = {
   politics: { icon: Flag, span: "md:col-span-4", tone: "bg-ink text-paper", accent: "text-gold" },
-  grievances: { icon: Megaphone, span: "md:col-span-2", tone: "bg-gold-tint text-ink", accent: "text-gold" },
+  grievances: { icon: Megaphone, span: "md:col-span-2", tone: "bg-gold-tint text-ink", accent: "text-amber-800" },
   youth: { icon: Sparkles, span: "md:col-span-2", tone: "bg-forest-tint text-ink", accent: "text-forest" },
-  welfare: { icon: HandHeart, span: "md:col-span-4", tone: "bg-forest text-paper", accent: "text-gold" },
+  welfare: { icon: HandHeart, span: "md:col-span-4", tone: "bg-forest text-paper", accent: "text-amber-300" },
 };
 
 export function Pillars() {
@@ -35,6 +35,8 @@ export function Pillars() {
               {p.image && (
                 <img
                   src={p.image.src}
+                  srcSet={`${p.image.src.replace(".webp", "-640.webp")} 640w, ${p.image.src} 1200w`}
+                  sizes="(min-width: 768px) 60vw, 100vw"
                   alt={p.image[lang]}
                   loading="lazy"
                   className="-mx-2 -mt-2 mb-6 aspect-[16/10] w-[calc(100%+1rem)] rounded-2xl object-cover object-[50%_30%] sm:-mx-4 sm:-mt-4 sm:w-[calc(100%+2rem)]"

@@ -18,6 +18,8 @@ export function Portrait({
       {!failed ? (
         <img
           src={SITE.portraitSrc}
+          srcSet={`${SITE.portraitSrc.replace(".webp", "-640.webp")} 640w, ${SITE.portraitSrc} 880w`}
+          sizes="(min-width: 768px) 40vw, 90vw"
           alt="Portrait of Mudasir Wali"
           className="absolute inset-0 size-full object-cover"
           style={{ objectPosition: position }}

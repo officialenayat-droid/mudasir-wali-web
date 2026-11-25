@@ -38,7 +38,7 @@ export const PILLARS: Pillar[] = [
     en: {
       title: "Constituency Grievances & Public Delegations",
       summary:
-        "Heading public delegations to flag civic grievances — including for the Hazratbal constituency — and following them up.",
+        "Taking part in public delegations that flag civic grievances — including the Hazratbal delegation to the party president in November 2026 — and following them up.",
       points: [
         "Taking up roads, drainage, water and power issues",
         "Janata Darbar portal: every grievance gets a reference ticket",
@@ -47,7 +47,7 @@ export const PILLARS: Pillar[] = [
     },
     ur: {
       title: "حلقے کے مسائل اور عوامی وفود",
-      summary: "شہری مسائل اٹھانے کے لیے عوامی وفود کی سربراہی — بشمول حلقہ حضرت بل — اور ان کی پیروی۔",
+      summary: "شہری مسائل اٹھانے والے عوامی وفود میں شرکت — بشمول نومبر ۲۰۲۶ میں پارٹی صدر سے ملنے والا حضرت بل کا وفد — اور ان کی پیروی۔",
       points: [
         "سڑکوں، نکاسی، پانی اور بجلی کے مسائل اٹھانا",
         "جنتا دربار پورٹل: ہر شکایت کا حوالہ نمبر",

@@ -133,7 +133,7 @@ export function JanataDarbar() {
             </form>
           ) : (
             <div id={`${uid}-ticket`} tabIndex={-1} role="status" className="rounded-3xl bg-ink p-6 text-paper outline-none sm:p-8">
-              <p className="eyebrow">{t.darbar.ticketTitle}</p>
+              <p className="eyebrow text-amber-400!">{t.darbar.ticketTitle}</p>
               <p className="mt-3 font-mono text-3xl font-bold tracking-wider text-gold sm:text-4xl" dir="ltr">{ticket.id}</p>
               <p className="mt-4 text-slate-300">{t.darbar.ticketNote}</p>
               <pre className="mt-6 max-h-60 overflow-auto whitespace-pre-wrap rounded-2xl bg-white/5 p-4 text-start font-sans text-sm text-slate-200" dir="ltr">{ticket.message.replace(/\*|_/g, "")}</pre>

@@ -65,7 +65,7 @@ export default function Connect() {
                   href={href}
                   {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className={`flex min-h-16 items-center gap-4 rounded-2xl px-5 py-3 transition active:scale-[0.99] ${
-                    primary ? "bg-gold text-white hover:bg-amber-700" : "bg-white/[0.07] ring-1 ring-white/10 hover:bg-white/[0.12]"
+                    primary ? "bg-amber-700 text-white hover:bg-amber-800" : "bg-white/[0.07] ring-1 ring-white/10 hover:bg-white/[0.12]"
                   }`}
                 >
                   <Icon className="size-5 shrink-0" aria-hidden="true" />

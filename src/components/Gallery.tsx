@@ -44,9 +44,11 @@ export function Gallery() {
             >
               <img
                 src={p.src}
+                srcSet={`${p.src.replace(".webp", "-640.webp")} 640w, ${p.src} ${p.w}w`}
+                sizes="(min-width: 768px) 33vw, 50vw"
                 width={p.w}
                 height={p.h}
-                alt={p[lang]}
+                alt=""
                 loading="lazy"
                 decoding="async"
                 className="h-auto w-full transition duration-500 group-hover:scale-[1.03]"
