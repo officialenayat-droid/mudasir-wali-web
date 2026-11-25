@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import { UrduBanner } from "../components/UrduBanner";
+import { About } from "../components/About";
 import { Pillars } from "../components/Pillars";
 import { WardTracker } from "../components/WardTracker";
 import { JanataDarbar } from "../components/JanataDarbar";
@@ -26,6 +27,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <UrduBanner />
+        <About />
         <Pillars />
         <WardTracker />
         <JanataDarbar />

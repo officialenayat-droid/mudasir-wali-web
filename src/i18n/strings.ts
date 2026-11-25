@@ -1,7 +1,7 @@
 export type Lang = "en" | "ur";
 
 const en = {
-  nav: { pillars: "Agenda", wards: "Wards", darbar: "Janata Darbar", gallery: "Gallery", press: "Press Room", join: "Join" },
+  nav: { about: "About", pillars: "Agenda", wards: "Wards", darbar: "Janata Darbar", gallery: "Gallery", press: "Press Room", join: "Join" },
   langToggle: "اردو",
   hero: {
     badge: "Joint Secretary · District Srinagar",
@@ -9,16 +9,29 @@ const en = {
     title1: "Voice of Youth.",
     title2: "Action on the Ground.",
     lede:
-      "From Shaheed Gunj to Hazratbal, Mudasir Wali works for Srinagar's young people — mobilising youth, leading public delegations, and taking constituency grievances forward.",
+      "Politician, social activist and youth leader — Mudasir Wali works across Kashmir to raise the voice of the people, empower young people and take public concerns forward.",
     ctaReport: "Report a Constituency Issue",
     ctaJoin: "Join the Youth Movement",
-    portraitCaption: "Shaheed Gunj · Srinagar",
+    portraitCaption: "Srinagar · Kashmir",
   },
   urduBanner: {
     kicker: "Message to the people of Srinagar",
     text: "Srinagar's youth are its greatest strength. Your voice, your issues, our responsibility.",
   },
-  pillars: { eyebrow: "Our Agenda", title: "Politics for Srinagar, on record." },
+  about: {
+    eyebrow: "About",
+    title: "Politician. Social Activist. Youth Leader.",
+    roles: ["Joint Secretary, Srinagar — Jammu & Kashmir Apni Party"],
+    bio: [
+      "Mudasir Wali is a politician and social activist committed to public welfare, youth empowerment, and positive social change. Through his political and social responsibilities, he works to raise public concerns, promote community development, and encourage young people to become responsible leaders.",
+      "His vision is to build a better, safer, and more progressive society where every individual has a voice and the youth have opportunities to shape a brighter future.",
+    ],
+    mission: "Mission",
+    missionText: "To raise the voice of the people, serve society, empower youth, and work towards a better future for coming generations.",
+    vision: "Vision",
+    visionText: "A stronger, safer, and more inclusive society built through unity, responsibility, and positive action.",
+  },
+  pillars: { eyebrow: "Our Agenda", title: "Politics for Kashmir, on record." },
   wards: {
     eyebrow: "Srinagar Ward Tracker",
     title: "Where the work is focused.",
@@ -89,7 +102,7 @@ const en = {
 export type Strings = typeof en;
 
 const ur: Strings = {
-  nav: { pillars: "ایجنڈا", wards: "وارڈ", darbar: "جنتا دربار", gallery: "تصاویر", press: "پریس روم", join: "شامل ہوں" },
+  nav: { about: "تعارف", pillars: "ایجنڈا", wards: "وارڈ", darbar: "جنتا دربار", gallery: "تصاویر", press: "پریس روم", join: "شامل ہوں" },
   langToggle: "English",
   hero: {
     badge: "جوائنٹ سیکریٹری · ضلع سرینگر",
@@ -97,16 +110,29 @@ const ur: Strings = {
     title1: "نوجوانوں کی آواز۔",
     title2: "زمین پر عمل۔",
     lede:
-      "شہید گنج سے حضرت بل تک، مدثر ولی سرینگر کے نوجوانوں کے لیے کام کر رہے ہیں — نوجوانوں کو متحرک کرنا، عوامی وفود کی قیادت، اور حلقے کے مسائل کو آگے بڑھانا۔",
+      "سیاستدان، سماجی کارکن اور نوجوان رہنما — مدثر ولی پورے کشمیر میں عوام کی آواز بلند کرنے، نوجوانوں کو بااختیار بنانے اور عوامی مسائل کو آگے بڑھانے کے لیے کام کر رہے ہیں۔",
     ctaReport: "علاقے کا مسئلہ درج کریں",
     ctaJoin: "نوجوانوں کی تحریک میں شامل ہوں",
-    portraitCaption: "شہید گنج · سرینگر",
+    portraitCaption: "سرینگر · کشمیر",
   },
   urduBanner: {
     kicker: "اہلیانِ سرینگر کے نام پیغام",
     text: "سرینگر کے نوجوان اس کی سب سے بڑی طاقت ہیں۔ آپ کی آواز، آپ کے مسائل، ہماری ذمہ داری۔",
   },
-  pillars: { eyebrow: "ہمارا ایجنڈا", title: "سرینگر کی سیاست، ریکارڈ پر۔" },
+  about: {
+    eyebrow: "تعارف",
+    title: "سیاستدان۔ سماجی کارکن۔ نوجوان رہنما۔",
+    roles: ["جوائنٹ سیکریٹری، سرینگر — جموں و کشمیر اپنی پارٹی"],
+    bio: [
+      "مدثر ولی ایک سیاستدان اور سماجی کارکن ہیں جو عوامی فلاح، نوجوانوں کو بااختیار بنانے اور مثبت سماجی تبدیلی کے لیے پُرعزم ہیں۔ اپنی سیاسی اور سماجی ذمہ داریوں کے ذریعے وہ عوامی مسائل اٹھاتے ہیں، سماجی ترقی کو فروغ دیتے ہیں اور نوجوانوں کو ذمہ دار رہنما بننے کی ترغیب دیتے ہیں۔",
+      "ان کا وژن ایک بہتر، محفوظ اور ترقی پسند معاشرہ ہے جہاں ہر فرد کی آواز ہو اور نوجوانوں کو روشن مستقبل کی تشکیل کے مواقع ملیں۔",
+    ],
+    mission: "مشن",
+    missionText: "عوام کی آواز بلند کرنا، معاشرے کی خدمت کرنا، نوجوانوں کو بااختیار بنانا، اور آنے والی نسلوں کے بہتر مستقبل کے لیے کام کرنا۔",
+    vision: "وژن",
+    visionText: "اتحاد، ذمہ داری اور مثبت عمل کے ذریعے ایک مضبوط، محفوظ اور سب کو ساتھ لے کر چلنے والا معاشرہ۔",
+  },
+  pillars: { eyebrow: "ہمارا ایجنڈا", title: "کشمیر کی سیاست، ریکارڈ پر۔" },
   wards: {
     eyebrow: "سرینگر وارڈ ٹریکر",
     title: "کام کہاں ہو رہا ہے۔",

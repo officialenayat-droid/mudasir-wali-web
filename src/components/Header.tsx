@@ -16,6 +16,7 @@ export function Header() {
   }, []);
 
   const links = [
+    { href: "/#about", label: t.nav.about },
     { href: "/#pillars", label: t.nav.pillars },
     { href: "/#wards", label: t.nav.wards },
     { href: "/#darbar", label: t.nav.darbar },

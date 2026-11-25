@@ -60,7 +60,7 @@ export const PILLARS: Pillar[] = [
     en: {
       title: "Youth Employment & Representation",
       summary:
-        "A direct line for Srinagar's young people on employment, opportunity and their say in local decision-making.",
+        "A direct line for Kashmir's young people on employment, opportunity and their say in local decision-making.",
       points: [
         "Raising youth employment as a constituency priority",
         "Bringing young people into party work and decision-making",
@@ -69,7 +69,7 @@ export const PILLARS: Pillar[] = [
     },
     ur: {
       title: "نوجوانوں کا روزگار اور نمائندگی",
-      summary: "سرینگر کے نوجوانوں کے لیے روزگار، مواقع اور مقامی فیصلوں میں ان کی آواز کے لیے براہِ راست رابطہ۔",
+      summary: "کشمیر کے نوجوانوں کے لیے روزگار، مواقع اور مقامی فیصلوں میں ان کی آواز کے لیے براہِ راست رابطہ۔",
       points: [
         "نوجوانوں کے روزگار کو حلقے کی ترجیح بنانا",
         "نوجوانوں کو پارٹی کام اور فیصلہ سازی میں شامل کرنا",

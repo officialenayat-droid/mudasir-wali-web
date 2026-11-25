@@ -6,7 +6,7 @@ export const LOCALITIES: { id: LocalityId; en: string; ur: string }[] = [
   { id: "brain-nishat", en: "Brain Nishat", ur: "برین نشاط" },
   { id: "batwara", en: "Batwara", ur: "بٹوارہ" },
   { id: "guru-bazar", en: "Guru Bazar", ur: "گرو بازار" },
-  { id: "other", en: "Other — District Srinagar", ur: "دیگر — ضلع سرینگر" },
+  { id: "other", en: "Other area — Kashmir", ur: "دیگر علاقہ — کشمیر" },
 ];
 
 export type IssueCategoryId = "roads" | "drainage" | "water-power" | "employment" | "traffic" | "education" | "other";

@@ -46,6 +46,7 @@ export default function Connect() {
             <Portrait className="size-28" rounded="rounded-full" position="52% 42%" />
           </div>
           <h1 className="mt-5 font-serif text-5xl leading-none">Mudasir Wali</h1>
+          <p className="mt-3 text-sm font-semibold text-paper/90">{t.about.title}</p>
           <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-100">
             <BadgeCheck className="size-4 text-gold" aria-hidden="true" />
             {t.hero.badge}
