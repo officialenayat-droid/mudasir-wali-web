@@ -49,6 +49,9 @@ export function PressRoom() {
     <Section id="press" eyebrow={t.press.eyebrow} title={t.press.title} lede={t.press.lede} tone="ink">
       <div className="grid gap-4 lg:grid-cols-2">
         <article className="flex flex-col rounded-3xl bg-paper p-6 text-ink sm:p-8 lg:row-span-3">
+          {lead.image && (
+            <img src={lead.image.src} alt={lead.image.alt} loading="lazy" className="-mx-2 -mt-2 mb-6 aspect-[16/9] w-[calc(100%+1rem)] rounded-2xl object-cover sm:-mx-4 sm:-mt-4 sm:w-[calc(100%+2rem)]" />
+          )}
           <Meta note={lead} />
           <h3 className="mt-5 font-serif text-3xl leading-tight sm:text-4xl">{lead.title}</h3>
           <p className="mt-4 text-lg text-slate-600">{lead.dek}</p>
@@ -91,6 +94,7 @@ export function PressRoom() {
               </button>
             </div>
             <div className="flex-1 overflow-y-auto px-5 py-8 sm:px-8">
+              {active.image && <img src={active.image.src} alt={active.image.alt} className="mb-6 aspect-[16/9] w-full rounded-2xl object-cover" />}
               <Meta note={active} />
               <h2 id="press-dialog-title" className="mt-5 font-serif text-4xl leading-tight">{active.title}</h2>
               <p className="mt-4 text-lg text-slate-600">{active.dek}</p>

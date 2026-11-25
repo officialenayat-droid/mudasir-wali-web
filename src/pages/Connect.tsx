@@ -44,7 +44,7 @@ export default function Connect() {
 
         <header className="mt-4 flex flex-col items-center text-center">
           <div className="rounded-full p-1 ring-2 ring-gold">
-            <Portrait className="size-28" rounded="rounded-full" />
+            <Portrait className="size-28" rounded="rounded-full" position="52% 42%" />
           </div>
           <h1 className="mt-5 font-serif text-5xl leading-none">Mudasir Wali</h1>
           <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-100">

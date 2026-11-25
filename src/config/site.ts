@@ -11,6 +11,6 @@ export const SITE = {
   krsfInstagramUrl: "https://www.instagram.com/krsf_org/",
   /** Digits only, international format. Empty → WhatsApp lets the sender pick a contact. */
   whatsappNumber: ((import.meta.env.VITE_WHATSAPP_NUMBER as string | undefined) ?? "").replace(/\D/g, ""),
-  /** Optional portrait at /public/portrait.jpg — a monogram is shown if missing. */
-  portraitSrc: "/portrait.jpg",
+  /** Main portrait (photo 2 of the supplied set). A monogram is shown if it fails to load. */
+  portraitSrc: "/photos/portrait.webp",
 } as const;

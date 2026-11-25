@@ -1,7 +1,7 @@
 export type Lang = "en" | "ur";
 
 const en = {
-  nav: { pillars: "Public Work", wards: "Wards", darbar: "Janata Darbar", press: "Press Room", join: "Join" },
+  nav: { pillars: "Public Work", wards: "Wards", darbar: "Janata Darbar", gallery: "Gallery", press: "Press Room", join: "Join" },
   langToggle: "اردو",
   hero: {
     badge: "Youth Wing Joint Secretary · District Srinagar",
@@ -51,6 +51,13 @@ const en = {
     required: "Please fill in this field.",
     phoneInvalid: "Enter a valid 10-digit mobile number.",
   },
+  gallery: {
+    eyebrow: "On the Ground",
+    title: "Moments from the movement.",
+    open: "View photo",
+    prev: "Previous photo",
+    next: "Next photo",
+  },
   press: {
     eyebrow: "Media & Press Room",
     title: "Press notes for the newsroom.",
@@ -82,7 +89,7 @@ const en = {
 export type Strings = typeof en;
 
 const ur: Strings = {
-  nav: { pillars: "عوامی کام", wards: "وارڈ", darbar: "جنتا دربار", press: "پریس روم", join: "شامل ہوں" },
+  nav: { pillars: "عوامی کام", wards: "وارڈ", darbar: "جنتا دربار", gallery: "تصاویر", press: "پریس روم", join: "شامل ہوں" },
   langToggle: "English",
   hero: {
     badge: "جوائنٹ سیکریٹری یوتھ ونگ · ضلع سرینگر",
@@ -131,6 +138,13 @@ const ur: Strings = {
     privacy: "آپ کی معلومات صرف اس شکایت پر کارروائی کے لیے استعمال ہوں گی۔ اس ویب سائٹ پر کچھ محفوظ نہیں کیا جاتا۔",
     required: "براہِ کرم یہ خانہ پُر کریں۔",
     phoneInvalid: "درست دس ہندسوں کا موبائل نمبر درج کریں۔",
+  },
+  gallery: {
+    eyebrow: "زمینی سطح پر",
+    title: "تحریک کے لمحات۔",
+    open: "تصویر دیکھیں",
+    prev: "پچھلی تصویر",
+    next: "اگلی تصویر",
   },
   press: {
     eyebrow: "میڈیا اور پریس روم",

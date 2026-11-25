@@ -25,6 +25,14 @@ export function Pillars() {
           const Icon = m.icon;
           return (
             <li key={p.id} className={`${m.span} ${m.tone} flex flex-col rounded-3xl p-6 sm:p-8`}>
+              {p.image && (
+                <img
+                  src={p.image.src}
+                  alt={p.image[lang]}
+                  loading="lazy"
+                  className="-mx-2 -mt-2 mb-6 aspect-[16/10] w-[calc(100%+1rem)] rounded-2xl object-cover object-[50%_30%] sm:-mx-4 sm:-mt-4 sm:w-[calc(100%+2rem)]"
+                />
+              )}
               <button
                 type="button"
                 className="flex w-full items-start justify-between gap-4 text-start"

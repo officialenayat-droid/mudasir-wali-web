@@ -5,11 +5,13 @@ export type Pillar = {
   en: { title: string; summary: string; points: string[] };
   ur: { title: string; summary: string; points: string[] };
   partner?: { name: string; url?: string };
+  image?: { src: string; en: string; ur: string };
 };
 
 export const PILLARS: Pillar[] = [
   {
     id: "politics",
+    image: { src: "/photos/podium.webp", en: "Mudasir Wali addressing party workers", ur: "مدثر ولی پارٹی کارکنوں سے خطاب کرتے ہوئے" },
     en: {
       title: "Political Leadership & Youth Mobilization",
       summary:
@@ -33,6 +35,7 @@ export const PILLARS: Pillar[] = [
   },
   {
     id: "road-safety",
+    image: { src: "/photos/road-safety-ambulances.webp", en: "Ambulance handover event, NHIDCL", ur: "ایمبولینس حوالگی تقریب" },
     en: {
       title: "Road Safety & Civic Advocacy",
       summary:

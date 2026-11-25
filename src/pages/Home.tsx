@@ -6,6 +6,7 @@ import { Pillars } from "../components/Pillars";
 import { WardTracker } from "../components/WardTracker";
 import { JanataDarbar } from "../components/JanataDarbar";
 import { PressRoom } from "../components/PressRoom";
+import { Gallery } from "../components/Gallery";
 import { Volunteer } from "../components/Volunteer";
 import { Footer } from "../components/Footer";
 
@@ -28,6 +29,7 @@ export default function Home() {
         <Pillars />
         <WardTracker />
         <JanataDarbar />
+        <Gallery />
         <PressRoom />
         <Volunteer />
       </main>

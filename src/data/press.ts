@@ -9,6 +9,7 @@ export type PressNote = {
   title: string;
   dek: string;
   body: string[];
+  image?: { src: string; alt: string };
 };
 
 export const PRESS_NOTES: PressNote[] = [
@@ -16,6 +17,7 @@ export const PRESS_NOTES: PressNote[] = [
     id: "apni-party-induction-2026",
     dateLabel: "May 2026",
     category: "Politics",
+    image: { src: "/photos/joining-drive.webp", alt: "Youth joining drive, J&K Apni Party" },
     title: "Mudasir Wali joins J&K Apni Party, named Youth Wing Joint Secretary for District Srinagar",
     dek: "Shaheed Gunj youth leader formally inducted in Srinagar under party president Syed Mohammad Altaf Bukhari.",
     body: [

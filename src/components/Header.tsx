@@ -19,6 +19,7 @@ export function Header() {
     { href: "/#pillars", label: t.nav.pillars },
     { href: "/#wards", label: t.nav.wards },
     { href: "/#darbar", label: t.nav.darbar },
+    { href: "/#gallery", label: t.nav.gallery },
     { href: "/#press", label: t.nav.press },
   ];
 

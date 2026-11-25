@@ -32,9 +32,11 @@ Shared utilities: `btn`, `btn-primary`, `btn-gold`, `btn-ghost`, `field`, `label
 - `src/data/` — pillars, wards, press notes, localities/categories. **Content edits go here.**
 - `src/i18n/strings.ts` — all UI copy in `en` + `ur`; `LanguageContext` sets `<html lang dir>`; `?lang=ur` deep-links Urdu
 - `index.html` — SEO meta, OpenGraph, JSON-LD (`Person`, `PoliticalParty`, `Organization`, `WebSite`)
-- `public/` — `portrait.jpg` (add; monogram fallback otherwise), `og-image.png`, `robots.txt`, `sitemap.xml`
+- `public/photos/` — WebP photos (≤1200px) used by `src/data/gallery.ts`, pillars and press notes; `portrait.webp` is the main portrait (confirmed by the client: photo 2 of the supplied set)
+- `public/` — `portrait.jpg` (JSON-LD image), `og-image.jpg` (1200×630 share card), `robots.txt`, `sitemap.xml`
 
 ## Rules
+- Photo captions describe the event only. Never name anyone in a photo unless the client has confirmed who they are.
 - Facts only. No invented quotes, dates, statistics or media coverage. Ward "on the ground" items and press notes must be verifiable.
 - Forms never store data; they build a WhatsApp message (`src/lib/whatsapp.ts`). Ticket IDs: `MW-SRN-<year>-<4 chars>`.
 - Use logical CSS properties (`ms-`, `pe-`, `start-`, `text-start`) so RTL works; flip directional icons with `rtl:-scale-x-100`.

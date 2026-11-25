@@ -2,7 +2,16 @@ import { useState } from "react";
 import { SITE } from "../config/site";
 
 /** Shows /public/portrait.jpg when present, otherwise an editorial monogram. */
-export function Portrait({ className = "", rounded = "rounded-[2rem]" }: { className?: string; rounded?: string }) {
+export function Portrait({
+  className = "",
+  rounded = "rounded-[2rem]",
+  position = "50% 30%",
+}: {
+  className?: string;
+  rounded?: string;
+  /** CSS object-position, e.g. to centre the face in a small circle. */
+  position?: string;
+}) {
   const [failed, setFailed] = useState(false);
   return (
     <div className={`relative overflow-hidden bg-gradient-to-b from-ink-soft to-forest-deep ${rounded} ${className}`}>
@@ -11,6 +20,7 @@ export function Portrait({ className = "", rounded = "rounded-[2rem]" }: { class
           src={SITE.portraitSrc}
           alt="Portrait of Mudasir Wali"
           className="absolute inset-0 size-full object-cover"
+          style={{ objectPosition: position }}
           onError={() => setFailed(true)}
           fetchPriority="high"
         />
