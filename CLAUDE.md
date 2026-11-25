@@ -45,7 +45,7 @@ Colours are the J&K Apni Party flag (red / white / blue). Shared utilities: `btn
 
 ## Rules
 - Political agenda only (client decision): no road-safety, KRSF or community/religious-service content. The About bio/mission/vision (`t.about` in strings.ts) is the client's own text — keep it verbatim. His scope is Kashmir-wide; his post is Joint Secretary, Srinagar. The KRSF "Director, Public Relations" role is deliberately omitted unless the client asks. His title is "Joint Secretary, District Srinagar" — never "Youth Wing".
-- Photo captions describe the event only. Never name anyone in a photo unless the client has confirmed who they are.
+- Photo captions describe the event only. Never name anyone in a photo unless the client has confirmed who they are. Confirmed so far: Mudasir Wali (portrait, podium photos); J&K Lieutenant Governor Manoj Sinha (`lg-courtesy-meeting.webp`, courtesy meeting).
 - Hazratbal delegation (14 Nov 2026) was led by Mohammad Sidiq Mir; Mudasir Wali was a member — never say he led it. Press notes should carry `sources` links to published coverage.
 - Text colour: small text on light backgrounds uses `accent-deep`/`brand`; on dark (ink/brand) use `accent-soft`/`brand-soft`. Flag red `#DE2910` on dark navy fails WCAG for small text — only use it there for large headings.
 - Ward tracker covers Srinagar district's 8 assembly constituencies (2022 delimitation: AC 19 Hazratbal, 20 Khanyar, 21 Habba Kadal, 22 Lal Chowk, 23 Chanapora, 24 Zadibal, 25 Eidgah, 26 Central Shalteng) plus key localities (`src/data/localities.ts`, `src/data/wards.ts`). Don't map localities to constituencies without a source.

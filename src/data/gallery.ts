@@ -1,10 +1,11 @@
 /**
  * Photo gallery. Captions describe the event only — never name people who
- * haven't been confirmed. Files live in /public/photos (WebP, ≤1200px).
+ * haven't been confirmed. (LG Manoj Sinha in the courtesy-meeting photo: confirmed by the client.) Files live in /public/photos (WebP, ≤1200px).
  */
 export type Photo = { src: string; w: number; h: number; en: string; ur: string };
 
 export const GALLERY: Photo[] = [
+  { src: "/photos/lg-courtesy-meeting.webp", w: 1063, h: 1200, en: "Courtesy meeting with Lieutenant Governor Manoj Sinha", ur: "لیفٹیننٹ گورنر منوج سنہا سے خیر سگالی ملاقات" },
   { src: "/photos/podium.webp", w: 900, h: 1200, en: "Addressing party workers", ur: "پارٹی کارکنوں سے خطاب" },
   { src: "/photos/joining-drive.webp", w: 1200, h: 900, en: "Youth joining drive, J&K Apni Party", ur: "اپنی پارٹی میں نوجوانوں کی شمولیتی مہم" },
   { src: "/photos/joining-banner.webp", w: 1200, h: 900, en: "New members in front of the party banner", ur: "پارٹی بینر کے سامنے نئے اراکین" },
