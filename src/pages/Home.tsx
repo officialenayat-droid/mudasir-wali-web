@@ -12,7 +12,7 @@ import { Footer } from "../components/Footer";
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Mudasir Wali — Youth Wing Joint Secretary, Srinagar | J&K Apni Party";
+    document.title = "Mudasir Wali — Joint Secretary, Srinagar | J&K Apni Party";
     // SPA content renders after load, so honour /#section links manually.
     if (window.location.hash) document.getElementById(window.location.hash.slice(1))?.scrollIntoView();
   }, []);

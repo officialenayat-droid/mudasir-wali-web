@@ -16,7 +16,7 @@ export const ISSUE_CATEGORIES: { id: IssueCategoryId; en: string; ur: string }[]
   { id: "drainage", en: "Drainage & Sanitation", ur: "نکاسی اور صفائی" },
   { id: "water-power", en: "Water & Electricity", ur: "پانی اور بجلی" },
   { id: "employment", en: "Youth Employment", ur: "نوجوانوں کا روزگار" },
-  { id: "traffic", en: "Traffic & Road Safety", ur: "ٹریفک اور سڑک تحفظ" },
+  { id: "traffic", en: "Traffic & Transport", ur: "ٹریفک اور ٹرانسپورٹ" },
   { id: "education", en: "Education & Scholarships", ur: "تعلیم اور وظائف" },
   { id: "other", en: "Other", ur: "دیگر" },
 ];

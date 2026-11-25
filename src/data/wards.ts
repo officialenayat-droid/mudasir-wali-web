@@ -42,10 +42,8 @@ export const WARDS: Ward[] = [
   },
   {
     id: "guru-bazar",
-    tagline: { en: "Community service", ur: "سماجی خدمت" },
+    tagline: { en: "Constituency outreach", ur: "حلقہ جاتی رابطہ" },
     focus: ["traffic", "roads", "drainage", "employment"],
-    onGround: [
-      { en: "Ground logistics with the Yadgar-i-Hussaini committee for the 8th Muharram procession from Guru Bazar.", ur: "یادگارِ حسینی کمیٹی کے ساتھ گرو بازار سے آٹھویں محرم کے جلوس کے زمینی انتظامات۔" },
-    ],
+    onGround: [],
   },
 ];

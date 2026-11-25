@@ -1,15 +1,15 @@
 export type Lang = "en" | "ur";
 
 const en = {
-  nav: { pillars: "Public Work", wards: "Wards", darbar: "Janata Darbar", gallery: "Gallery", press: "Press Room", join: "Join" },
+  nav: { pillars: "Agenda", wards: "Wards", darbar: "Janata Darbar", gallery: "Gallery", press: "Press Room", join: "Join" },
   langToggle: "اردو",
   hero: {
-    badge: "Youth Wing Joint Secretary · District Srinagar",
+    badge: "Joint Secretary · District Srinagar",
     party: "Jammu & Kashmir Apni Party",
     title1: "Voice of Youth.",
     title2: "Action on the Ground.",
     lede:
-      "From Shaheed Gunj to Hazratbal, Mudasir Wali works for Srinagar's young people — raising civic grievances, championing road safety, and serving the community on the ground.",
+      "From Shaheed Gunj to Hazratbal, Mudasir Wali works for Srinagar's young people — mobilising youth, leading public delegations, and taking constituency grievances forward.",
     ctaReport: "Report a Constituency Issue",
     ctaJoin: "Join the Youth Movement",
     portraitCaption: "Shaheed Gunj · Srinagar",
@@ -18,7 +18,7 @@ const en = {
     kicker: "Message to the people of Srinagar",
     text: "Srinagar's youth are its greatest strength. Your voice, your issues, our responsibility.",
   },
-  pillars: { eyebrow: "The Four Pillars", title: "Public work, on record." },
+  pillars: { eyebrow: "Our Agenda", title: "Politics for Srinagar, on record." },
   wards: {
     eyebrow: "Srinagar Ward Tracker",
     title: "Where the work is focused.",
@@ -68,7 +68,7 @@ const en = {
     close: "Close",
   },
   volunteer: {
-    eyebrow: "Youth Wing Sign-Up",
+    eyebrow: "Youth Movement Sign-Up",
     title: "Srinagar needs its youth. Step in.",
     lede: "Register as a volunteer. The team will reach you on WhatsApp with next steps.",
     role: "How do you want to help?",
@@ -78,7 +78,7 @@ const en = {
   roles: {
     ground: "Ground Mobilization",
     social: "Social Media",
-    roadSafety: "Road Safety Volunteer",
+    booth: "Booth / Ward Volunteer",
   },
   footer: {
     rights: "Office of Mudasir Wali. All rights reserved.",
@@ -89,15 +89,15 @@ const en = {
 export type Strings = typeof en;
 
 const ur: Strings = {
-  nav: { pillars: "عوامی کام", wards: "وارڈ", darbar: "جنتا دربار", gallery: "تصاویر", press: "پریس روم", join: "شامل ہوں" },
+  nav: { pillars: "ایجنڈا", wards: "وارڈ", darbar: "جنتا دربار", gallery: "تصاویر", press: "پریس روم", join: "شامل ہوں" },
   langToggle: "English",
   hero: {
-    badge: "جوائنٹ سیکریٹری یوتھ ونگ · ضلع سرینگر",
+    badge: "جوائنٹ سیکریٹری · ضلع سرینگر",
     party: "جموں و کشمیر اپنی پارٹی",
     title1: "نوجوانوں کی آواز۔",
     title2: "زمین پر عمل۔",
     lede:
-      "شہید گنج سے حضرت بل تک، مدثر ولی سرینگر کے نوجوانوں کے لیے کام کر رہے ہیں — عوامی مسائل اٹھانا، سڑک تحفظ کی وکالت، اور زمینی سطح پر سماج کی خدمت۔",
+      "شہید گنج سے حضرت بل تک، مدثر ولی سرینگر کے نوجوانوں کے لیے کام کر رہے ہیں — نوجوانوں کو متحرک کرنا، عوامی وفود کی قیادت، اور حلقے کے مسائل کو آگے بڑھانا۔",
     ctaReport: "علاقے کا مسئلہ درج کریں",
     ctaJoin: "نوجوانوں کی تحریک میں شامل ہوں",
     portraitCaption: "شہید گنج · سرینگر",
@@ -106,7 +106,7 @@ const ur: Strings = {
     kicker: "اہلیانِ سرینگر کے نام پیغام",
     text: "سرینگر کے نوجوان اس کی سب سے بڑی طاقت ہیں۔ آپ کی آواز، آپ کے مسائل، ہماری ذمہ داری۔",
   },
-  pillars: { eyebrow: "چار ستون", title: "عوامی خدمت، ریکارڈ پر۔" },
+  pillars: { eyebrow: "ہمارا ایجنڈا", title: "سرینگر کی سیاست، ریکارڈ پر۔" },
   wards: {
     eyebrow: "سرینگر وارڈ ٹریکر",
     title: "کام کہاں ہو رہا ہے۔",
@@ -156,7 +156,7 @@ const ur: Strings = {
     close: "بند کریں",
   },
   volunteer: {
-    eyebrow: "یوتھ ونگ رکنیت",
+    eyebrow: "نوجوانوں کی تحریک — رکنیت",
     title: "سرینگر کو اپنے نوجوانوں کی ضرورت ہے۔ آگے آئیں۔",
     lede: "بطور رضاکار اندراج کریں۔ ٹیم واٹس ایپ پر آپ سے رابطہ کرے گی۔",
     role: "آپ کس طرح مدد کرنا چاہتے ہیں؟",
@@ -166,7 +166,7 @@ const ur: Strings = {
   roles: {
     ground: "زمینی رابطہ مہم",
     social: "سوشل میڈیا",
-    roadSafety: "سڑک تحفظ رضاکار",
+    booth: "بوتھ / وارڈ رضاکار",
   },
   footer: {
     rights: "دفتر مدثر ولی۔ جملہ حقوق محفوظ ہیں۔",

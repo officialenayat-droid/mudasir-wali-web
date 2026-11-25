@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BadgeCheck, ChevronDown, ExternalLink, FileText, MessageSquareWarning, ShieldCheck, Users, type LucideIcon } from "lucide-react";
+import { BadgeCheck, ChevronDown, ExternalLink, FileText, MessageSquareWarning, Users, type LucideIcon } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import { SITE } from "../config/site";
 import { whatsappLink } from "../lib/whatsapp";
@@ -29,8 +29,7 @@ export default function Connect() {
       external: true,
     },
     { href: "/#press", label: ur ? "پریس روم" : "Press Room & Latest News", icon: FileText },
-    { href: "/#pillars", label: ur ? "عوامی کام" : "The Four Pillars of Public Work", icon: Users },
-    { href: SITE.krsfInstagramUrl, label: ur ? "کشمیر روڈ سیفٹی فاؤنڈیشن" : "Kashmir Road Safety Foundation", sub: "@krsf_org", icon: ShieldCheck, external: true },
+    { href: "/#pillars", label: ur ? "ہمارا ایجنڈا" : "Our Agenda for Srinagar", icon: Users },
     { href: SITE.instagramUrl, label: "Instagram", sub: `@${SITE.instagram}`, icon: InstagramIcon, external: true },
   ];
 

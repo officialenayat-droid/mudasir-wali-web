@@ -1,5 +1,5 @@
 import { useId, useState, type FormEvent } from "react";
-import { Megaphone, ShieldCheck, Users, type LucideIcon } from "lucide-react";
+import { Megaphone, Users, Vote, type LucideIcon } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import { LOCALITIES, localityName } from "../data/localities";
 import { STRINGS } from "../i18n/strings";
@@ -10,7 +10,7 @@ type RoleId = keyof typeof STRINGS.en.roles;
 const ROLES: { id: RoleId; icon: LucideIcon }[] = [
   { id: "ground", icon: Users },
   { id: "social", icon: Megaphone },
-  { id: "roadSafety", icon: ShieldCheck },
+  { id: "booth", icon: Vote },
 ];
 
 /** Volunteer registration. `compact` renders without the section chrome (used on /connect). */
@@ -31,7 +31,7 @@ export function VolunteerForm({ compact = false }: { compact?: boolean }) {
     if (!p) return setError(t.darbar.phoneInvalid);
     setError(null);
     const msg = [
-      "*Youth Wing Volunteer Registration*",
+      "*Youth Movement Volunteer Registration*",
       "",
       `*Name:* ${name.trim()}`,
       `*Locality:* ${localityName(locality, "en")}`,

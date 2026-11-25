@@ -9,8 +9,6 @@ import { Section } from "./Section";
 const CAT_STYLE: Record<PressNote["category"], string> = {
   Politics: "bg-ink text-paper",
   Civic: "bg-forest text-white",
-  "Road Safety": "bg-gold text-white",
-  Community: "bg-forest-tint text-forest",
 };
 
 function CopyButton({ note, className = "" }: { note: PressNote; className?: string }) {
@@ -47,8 +45,8 @@ export function PressRoom() {
 
   return (
     <Section id="press" eyebrow={t.press.eyebrow} title={t.press.title} lede={t.press.lede} tone="ink">
-      <div className="grid gap-4 lg:grid-cols-2">
-        <article className="flex flex-col rounded-3xl bg-paper p-6 text-ink sm:p-8 lg:row-span-3">
+      <div className="grid items-start gap-4 lg:grid-cols-2">
+        <article className="flex flex-col rounded-3xl bg-paper p-6 text-ink sm:p-8">
           {lead.image && (
             <img src={lead.image.src} alt={lead.image.alt} loading="lazy" className="-mx-2 -mt-2 mb-6 aspect-[16/9] w-[calc(100%+1rem)] rounded-2xl object-cover sm:-mx-4 sm:-mt-4 sm:w-[calc(100%+2rem)]" />
           )}
@@ -102,7 +100,7 @@ export function PressRoom() {
                 {active.body.map((p) => <p key={p}>{p}</p>)}
               </div>
               <p className="mt-10 border-t border-slate-200 pt-5 text-sm text-slate-500">
-                Issued by the Office of Mudasir Wali, Youth Wing Joint Secretary, District Srinagar, J&amp;K Apni Party · Instagram @{SITE.instagram}
+                Issued by the Office of Mudasir Wali, Joint Secretary, District Srinagar, J&amp;K Apni Party · Instagram @{SITE.instagram}
               </p>
             </div>
             <div className="border-t border-slate-200 px-5 py-4 sm:px-8">

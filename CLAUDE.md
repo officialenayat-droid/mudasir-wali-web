@@ -1,6 +1,6 @@
 # Mudasir Wali — Official Website
 
-Mobile-first political/public-leadership site for Mudasir Wali (Youth Wing Joint Secretary, District Srinagar, J&K Apni Party). Bilingual English / Urdu (RTL).
+Mobile-first political/public-leadership site for Mudasir Wali (Joint Secretary, District Srinagar, J&K Apni Party). Bilingual English / Urdu (RTL).
 
 ## Stack
 - React 19 + TypeScript 5.9 + Vite 8, React Router 7 (`/` home, `/connect` link-in-bio)
@@ -36,6 +36,7 @@ Shared utilities: `btn`, `btn-primary`, `btn-gold`, `btn-ghost`, `field`, `label
 - `public/` — `portrait.jpg` (JSON-LD image), `og-image.jpg` (1200×630 share card), `robots.txt`, `sitemap.xml`
 
 ## Rules
+- Political agenda only (client decision): no road-safety, KRSF or community/religious-service content. His title is "Joint Secretary, District Srinagar" — never "Youth Wing".
 - Photo captions describe the event only. Never name anyone in a photo unless the client has confirmed who they are.
 - Facts only. No invented quotes, dates, statistics or media coverage. Ward "on the ground" items and press notes must be verifiable.
 - Forms never store data; they build a WhatsApp message (`src/lib/whatsapp.ts`). Ticket IDs: `MW-SRN-<year>-<4 chars>`.
