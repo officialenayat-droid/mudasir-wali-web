@@ -35,24 +35,24 @@ export default function Connect() {
 
   return (
     <div className="relative min-h-dvh overflow-hidden bg-ink text-paper">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(6,95,70,0.55),transparent_65%)]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(8,57,156,0.55),transparent_65%)]" aria-hidden="true" />
       <main className="relative mx-auto flex max-w-md flex-col px-4 pb-12 pt-6">
         <div className="flex justify-end">
           <LangToggle className="text-paper" />
         </div>
 
         <header className="mt-4 flex flex-col items-center text-center">
-          <div className="rounded-full p-1 ring-2 ring-gold">
+          <div className="rounded-full p-1 ring-2 ring-accent">
             <Portrait className="size-28" rounded="rounded-full" position="52% 42%" />
           </div>
           <h1 className="mt-5 font-serif text-5xl leading-none">Mudasir Wali</h1>
           <p className="mt-3 text-sm font-semibold text-paper/90">{t.about.title}</p>
-          <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-100">
-            <BadgeCheck className="size-4 text-gold" aria-hidden="true" />
+          <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-brand-soft">
+            <BadgeCheck className="size-4 text-accent" aria-hidden="true" />
             {t.hero.badge}
           </p>
           <p className="mt-1 text-xs uppercase tracking-[0.18em] text-slate-400">{t.hero.party}</p>
-          <p className="mt-4 font-serif text-2xl italic text-gold">
+          <p className="mt-4 font-serif text-2xl italic text-accent">
             {t.hero.title1} {t.hero.title2}
           </p>
         </header>
@@ -65,13 +65,13 @@ export default function Connect() {
                   href={href}
                   {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className={`flex min-h-16 items-center gap-4 rounded-2xl px-5 py-3 transition active:scale-[0.99] ${
-                    primary ? "bg-amber-700 text-white hover:bg-amber-800" : "bg-white/[0.07] ring-1 ring-white/10 hover:bg-white/[0.12]"
+                    primary ? "bg-accent text-white hover:bg-accent-deep" : "bg-white/[0.07] ring-1 ring-white/10 hover:bg-white/[0.12]"
                   }`}
                 >
                   <Icon className="size-5 shrink-0" aria-hidden="true" />
                   <span className="flex-1 text-start">
                     <span className="block font-semibold">{label}</span>
-                    {sub && <span className={`block text-xs ${primary ? "text-amber-100" : "text-slate-400"}`}>{sub}</span>}
+                    {sub && <span className={`block text-xs ${primary ? "text-white" : "text-slate-400"}`}>{sub}</span>}
                   </span>
                   {external && <ExternalLink className="size-4 opacity-60" aria-hidden="true" />}
                 </a>
@@ -83,7 +83,7 @@ export default function Connect() {
                 aria-expanded={showForm}
                 aria-controls="connect-volunteer"
                 onClick={() => setShowForm((s) => !s)}
-                className="flex min-h-16 w-full items-center gap-4 rounded-2xl bg-forest px-5 py-3 font-semibold transition hover:bg-forest-deep"
+                className="flex min-h-16 w-full items-center gap-4 rounded-2xl bg-brand px-5 py-3 font-semibold transition hover:bg-brand-deep"
               >
                 <Users className="size-5 shrink-0" aria-hidden="true" />
                 <span className="flex-1 text-start">{t.hero.ctaJoin}</span>

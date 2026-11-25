@@ -16,15 +16,15 @@ Mobile-first political/public-leadership site for Mudasir Wali (Joint Secretary,
 ## Design tokens (`src/index.css`)
 | Token | Value | Use |
 |---|---|---|
-| `ink` | `#0F172A` | primary dark / text |
+| `ink` | `#0B1736` | dark navy base / text |
 | `paper` | `#F8FAFC` | background |
-| `forest` / `forest-deep` / `forest-tint` | `#065F46` / `#064E3B` / `#ECFDF5` | brand green |
-| `gold` / `gold-tint` | `#D97706` / `#FEF3C7` | accents, primary CTA |
+| `brand` / `brand-deep` / `brand-tint` / `brand-soft` | `#08399C` / `#062A73` / `#EAF0FC` / `#BFD3FF` | party flag blue (`brand-soft` = text on dark) |
+| `accent` / `accent-deep` / `accent-tint` / `accent-soft` | `#DE2910` / `#B8200B` / `#FDECEA` / `#FFB4A6` | party flag red (`accent-soft` = text on dark) |
 | `font-serif` | Instrument Serif | headlines |
 | `font-sans` | Plus Jakarta Sans | body / UI |
 | `font-urdu` | Noto Nastaliq Urdu | Urdu text (auto when `lang="ur"`) |
 
-Shared utilities: `btn`, `btn-primary`, `btn-gold`, `btn-ghost`, `field`, `label`, `eyebrow`.
+Colours are the J&K Apni Party flag (red / white / blue). Shared utilities: `btn`, `btn-primary`, `btn-accent`, `btn-ghost`, `field`, `label`, `eyebrow`.
 
 ## Where things live
 - `src/config/site.ts` — name, role, social links, WhatsApp number (from `.env`)
@@ -39,7 +39,7 @@ Shared utilities: `btn`, `btn-primary`, `btn-gold`, `btn-ghost`, `field`, `label
 - Political agenda only (client decision): no road-safety, KRSF or community/religious-service content. The About bio/mission/vision (`t.about` in strings.ts) is the client's own text — keep it verbatim. His scope is Kashmir-wide; his post is Joint Secretary, Srinagar. The KRSF "Director, Public Relations" role is deliberately omitted unless the client asks. His title is "Joint Secretary, District Srinagar" — never "Youth Wing".
 - Photo captions describe the event only. Never name anyone in a photo unless the client has confirmed who they are.
 - Hazratbal delegation (14 Nov 2026) was led by Mohammad Sidiq Mir; Mudasir Wali was a member — never say he led it. Press notes should carry `sources` links to published coverage.
-- Text colour: use `amber-700` for gold text on light backgrounds and `amber-300/400` on dark green/ink (`#D97706` fails WCAG contrast on both).
+- Text colour: small text on light backgrounds uses `accent-deep`/`brand`; on dark (ink/brand) use `accent-soft`/`brand-soft`. Flag red `#DE2910` on dark navy fails WCAG for small text — only use it there for large headings.
 - Facts only. No invented quotes, dates, statistics or media coverage. Ward "on the ground" items and press notes must be verifiable.
 - Forms never store data; they build a WhatsApp message (`src/lib/whatsapp.ts`). Ticket IDs: `MW-SRN-<year>-<4 chars>`.
 - Use logical CSS properties (`ms-`, `pe-`, `start-`, `text-start`) so RTL works; flip directional icons with `rtl:-scale-x-100`.

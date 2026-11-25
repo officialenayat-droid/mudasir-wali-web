@@ -15,7 +15,7 @@ export function About() {
           </h2>
           <ul className="mt-6 flex flex-wrap gap-2">
             {a.roles.map((r) => (
-              <li key={r} className="rounded-full bg-forest-tint px-3.5 py-1.5 text-sm font-semibold text-forest">
+              <li key={r} className="rounded-full bg-brand-tint px-3.5 py-1.5 text-sm font-semibold text-brand">
                 {r}
               </li>
             ))}
@@ -29,13 +29,13 @@ export function About() {
 
         <div className="flex flex-col gap-4 lg:col-span-5 lg:pt-16">
           <article className="rounded-3xl bg-ink p-7 text-paper sm:p-8">
-            <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-gold">
+            <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-accent-soft">
               <Target className="size-4" aria-hidden="true" /> {a.mission}
             </h3>
             <p className="mt-4 font-serif text-2xl leading-snug sm:text-3xl">{a.missionText}</p>
           </article>
-          <article className="rounded-3xl bg-forest p-7 text-paper sm:p-8">
-            <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-amber-300">
+          <article className="rounded-3xl bg-brand p-7 text-paper sm:p-8">
+            <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-accent-soft">
               <Compass className="size-4" aria-hidden="true" /> {a.vision}
             </h3>
             <p className="mt-4 font-serif text-2xl leading-snug sm:text-3xl">{a.visionText}</p>

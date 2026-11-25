@@ -58,7 +58,7 @@ export function VolunteerForm({ compact = false }: { compact?: boolean }) {
           {ROLES.map(({ id, icon: Icon }) => (
             <label
               key={id}
-              className={`flex min-h-14 cursor-pointer items-center gap-3 rounded-2xl border px-4 py-3 text-sm font-semibold transition has-[:checked]:border-amber-700 has-[:checked]:bg-amber-700 has-[:checked]:text-white has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-gold ${
+              className={`flex min-h-14 cursor-pointer items-center gap-3 rounded-2xl border px-4 py-3 text-sm font-semibold transition has-[:checked]:border-accent has-[:checked]:bg-accent has-[:checked]:text-white has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-accent ${
                 dark ? "border-white/20 text-paper" : "border-slate-300 bg-white text-ink"
               }`}
             >
@@ -90,7 +90,7 @@ export function VolunteerForm({ compact = false }: { compact?: boolean }) {
           <input id={`${uid}-phone`} type="tel" dir="ltr" inputMode="numeric" autoComplete="tel-national" placeholder="9XXXXXXXXX" className={`field ${fieldTone}`} value={phone} onChange={(e) => setPhone(e.target.value)} />
         </div>
       </div>
-      {error && <p role="alert" className={`text-sm font-medium ${dark ? "text-amber-300" : "text-red-700"}`}>{error}</p>}
+      {error && <p role="alert" className={`text-sm font-medium ${dark ? "text-accent-soft" : "text-red-700"}`}>{error}</p>}
       <button type="submit" className="btn bg-[#25D366] text-ink hover:bg-[#1ebe5b] w-full sm:w-auto">
         <WhatsAppIcon className="size-5" />
         {t.volunteer.submit}
@@ -102,12 +102,12 @@ export function VolunteerForm({ compact = false }: { compact?: boolean }) {
 export function Volunteer() {
   const { t } = useLang();
   return (
-    <section id="join" aria-labelledby="join-title" className="bg-forest-deep px-4 py-20 text-paper sm:px-6 md:py-28">
+    <section id="join" aria-labelledby="join-title" className="bg-brand-deep px-4 py-20 text-paper sm:px-6 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-12">
         <header className="lg:col-span-5">
-          <p className="eyebrow text-amber-400!">{t.volunteer.eyebrow}</p>
+          <p className="eyebrow text-accent-soft!">{t.volunteer.eyebrow}</p>
           <h2 id="join-title" className="mt-3 font-serif text-4xl leading-[1.05] sm:text-5xl md:text-6xl">{t.volunteer.title}</h2>
-          <p className="mt-4 text-lg text-emerald-100/80">{t.volunteer.lede}</p>
+          <p className="mt-4 text-lg text-brand-soft/90">{t.volunteer.lede}</p>
         </header>
         <div className="rounded-3xl bg-ink/40 p-5 ring-1 ring-white/10 sm:p-8 lg:col-span-7">
           <VolunteerForm />

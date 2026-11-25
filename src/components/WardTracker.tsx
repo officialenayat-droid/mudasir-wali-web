@@ -54,7 +54,7 @@ export function WardTracker() {
                 aria-pressed={active}
                 onClick={() => setFocus(f)}
                 className={`inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full px-3.5 text-xs font-semibold transition ${
-                  active ? "bg-forest text-white" : "bg-forest-tint text-forest hover:bg-emerald-100"
+                  active ? "bg-brand text-white" : "bg-brand-tint text-brand hover:bg-blue-100"
                 }`}
               >
                 {Icon && <Icon className="size-3.5" aria-hidden="true" />}
@@ -75,7 +75,7 @@ export function WardTracker() {
                   {localityName(w.id, lang === "en" ? "ur" : "en")}
                 </p>
               </div>
-              <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-gold-tint px-2.5 py-1 text-xs font-semibold text-amber-800">
+              <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-accent-tint px-2.5 py-1 text-xs font-semibold text-accent-deep">
                 <MapPin className="size-3" aria-hidden="true" />
                 {w.tagline[lang]}
               </span>
@@ -86,7 +86,7 @@ export function WardTracker() {
               {w.focus.map((c) => {
                 const Icon = CAT_ICON[c];
                 return (
-                  <li key={c} className={`inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-medium ${focus === c ? "bg-forest text-white" : "bg-white text-slate-700 ring-1 ring-slate-200"}`}>
+                  <li key={c} className={`inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-medium ${focus === c ? "bg-brand text-white" : "bg-white text-slate-700 ring-1 ring-slate-200"}`}>
                     <Icon className="size-3.5" aria-hidden="true" />
                     {categoryName(c, lang)}
                   </li>
@@ -100,7 +100,7 @@ export function WardTracker() {
                 <ul className="mt-2 space-y-2">
                   {w.onGround.map((u) => (
                     <li key={u.en} className="flex gap-2 text-sm leading-relaxed text-slate-700">
-                      <Megaphone className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" />
+                      <Megaphone className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
                       {u[lang]}
                     </li>
                   ))}
@@ -111,7 +111,7 @@ export function WardTracker() {
             <a
               href="#darbar"
               onClick={() => prefillGrievance({ locality: w.id, category: focus === "all" ? undefined : focus })}
-              className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-semibold text-forest hover:underline"
+              className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-semibold text-brand hover:underline"
             >
               <Plus className="size-4" aria-hidden="true" />
               {t.wards.reportHere}

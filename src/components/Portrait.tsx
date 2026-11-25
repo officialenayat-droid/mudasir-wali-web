@@ -14,7 +14,7 @@ export function Portrait({
 }) {
   const [failed, setFailed] = useState(false);
   return (
-    <div className={`relative overflow-hidden bg-gradient-to-b from-ink-soft to-forest-deep ${rounded} ${className}`}>
+    <div className={`relative overflow-hidden bg-gradient-to-b from-ink-soft to-brand-deep ${rounded} ${className}`}>
       {!failed ? (
         <img
           src={SITE.portraitSrc}

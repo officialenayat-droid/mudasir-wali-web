@@ -5,10 +5,10 @@ import { PILLARS, type PillarId } from "../data/pillars";
 import { Section } from "./Section";
 
 const META: Record<PillarId, { icon: LucideIcon; span: string; tone: string; accent: string }> = {
-  politics: { icon: Flag, span: "md:col-span-4", tone: "bg-ink text-paper", accent: "text-gold" },
-  grievances: { icon: Megaphone, span: "md:col-span-2", tone: "bg-gold-tint text-ink", accent: "text-amber-800" },
-  youth: { icon: Sparkles, span: "md:col-span-2", tone: "bg-forest-tint text-ink", accent: "text-forest" },
-  welfare: { icon: HandHeart, span: "md:col-span-4", tone: "bg-forest text-paper", accent: "text-amber-300" },
+  politics: { icon: Flag, span: "md:col-span-4", tone: "bg-ink text-paper", accent: "text-accent-soft" },
+  grievances: { icon: Megaphone, span: "md:col-span-2", tone: "bg-accent-tint text-ink", accent: "text-accent-deep" },
+  youth: { icon: Sparkles, span: "md:col-span-2", tone: "bg-brand-tint text-ink", accent: "text-brand" },
+  welfare: { icon: HandHeart, span: "md:col-span-4", tone: "bg-brand text-paper", accent: "text-accent-soft" },
 };
 
 export function Pillars() {

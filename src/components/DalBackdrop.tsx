@@ -9,13 +9,13 @@ export function DalBackdrop() {
     >
       <defs>
         <linearGradient id="dal-water" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#065F46" stopOpacity="0" />
-          <stop offset="0.5" stopColor="#065F46" stopOpacity="0.18" />
+          <stop offset="0" stopColor="#08399C" stopOpacity="0" />
+          <stop offset="0.5" stopColor="#08399C" stopOpacity="0.18" />
           <stop offset="1" stopColor="#0F172A" stopOpacity="1" />
         </linearGradient>
         <linearGradient id="dal-sun" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#D97706" stopOpacity="0.55" />
-          <stop offset="1" stopColor="#D97706" stopOpacity="0" />
+          <stop offset="0" stopColor="#DE2910" stopOpacity="0.55" />
+          <stop offset="1" stopColor="#DE2910" stopOpacity="0" />
         </linearGradient>
       </defs>
       <circle cx="1080" cy="250" r="120" fill="url(#dal-sun)" />

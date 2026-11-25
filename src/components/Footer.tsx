@@ -14,7 +14,7 @@ export function Footer() {
           <p className="mt-4 text-xs">{t.footer.note}</p>
         </div>
         <div className="flex flex-col gap-3 text-sm md:items-end">
-          <a href={SITE.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-paper hover:text-gold">
+          <a href={SITE.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-paper hover:text-accent">
             <InstagramIcon className="size-4" /> @{SITE.instagram}
           </a>
           <Link to="/connect" className="hover:text-paper">/connect</Link>

@@ -33,7 +33,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <a href="/" className="flex items-baseline gap-2" aria-label="Mudasir Wali — home">
           <span className="font-serif text-2xl leading-none">Mudasir Wali</span>
-          <span className="hidden h-1.5 w-1.5 rounded-full bg-gold sm:block" aria-hidden="true" />
+          <span className="hidden h-1.5 w-1.5 rounded-full bg-accent sm:block" aria-hidden="true" />
         </a>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 text-sm font-medium md:flex">
@@ -46,7 +46,7 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <LangToggle className="text-paper" />
-          <a href="/#join" className="btn-gold hidden min-h-10 px-5 md:inline-flex">
+          <a href="/#join" className="btn-accent hidden min-h-10 px-5 md:inline-flex">
             {t.nav.join}
           </a>
           <button
@@ -73,7 +73,7 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <a href="/#join" onClick={() => setOpen(false)} className="btn-gold mt-4 w-full">
+          <a href="/#join" onClick={() => setOpen(false)} className="btn-accent mt-4 w-full">
             {t.nav.join}
           </a>
         </nav>
