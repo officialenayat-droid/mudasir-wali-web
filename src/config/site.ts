@@ -1,7 +1,7 @@
 /** Central public configuration. Edit here, not in components. */
 export const SITE = {
   name: "Mudasir Wali",
-  url: (import.meta.env.VITE_SITE_URL as string | undefined) ?? "https://mudasirwali.in",
+  url: (import.meta.env.VITE_SITE_URL as string | undefined) ?? "https://mudasir-wali.vercel.app",
   role: "Youth Wing Joint Secretary, District Srinagar",
   party: "Jammu & Kashmir Apni Party",
   partyShort: "J&K Apni Party",

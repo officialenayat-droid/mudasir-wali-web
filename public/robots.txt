@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mudasirwali.in/sitemap.xml
+Sitemap: https://mudasir-wali.vercel.app/sitemap.xml
