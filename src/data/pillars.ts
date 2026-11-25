@@ -1,4 +1,4 @@
-export type PillarId = "politics" | "grievances" | "youth";
+export type PillarId = "politics" | "grievances" | "youth" | "welfare";
 
 export type Pillar = {
   id: PillarId;
@@ -7,7 +7,7 @@ export type Pillar = {
   image?: { src: string; en: string; ur: string };
 };
 
-/** Political agenda only (client decision): no road-safety or community-service pillars. */
+/** The Four Pillars. No road-safety or religious-service content (client decision); pillar 4 uses the client's own bio wording. */
 export const PILLARS: Pillar[] = [
   {
     id: "politics",
@@ -74,6 +74,28 @@ export const PILLARS: Pillar[] = [
         "نوجوانوں کے روزگار کو حلقے کی ترجیح بنانا",
         "نوجوانوں کو پارٹی کام اور فیصلہ سازی میں شامل کرنا",
         "ٹیم سے براہِ راست واٹس ایپ ہیلپ لائن",
+      ],
+    },
+  },
+  {
+    id: "welfare",
+    en: {
+      title: "Public Welfare & Social Change",
+      summary:
+        "Committed to public welfare and positive social change — raising public concerns and promoting community development.",
+      points: [
+        "Raising public concerns with unity and responsibility",
+        "Promoting community development across Kashmir",
+        "Encouraging young people to become responsible leaders",
+      ],
+    },
+    ur: {
+      title: "عوامی فلاح اور سماجی تبدیلی",
+      summary: "عوامی فلاح اور مثبت سماجی تبدیلی کے لیے پُرعزم — عوامی مسائل اٹھانا اور سماجی ترقی کو فروغ دینا۔",
+      points: [
+        "اتحاد اور ذمہ داری کے ساتھ عوامی مسائل اٹھانا",
+        "پورے کشمیر میں سماجی ترقی کو فروغ دینا",
+        "نوجوانوں کو ذمہ دار رہنما بننے کی ترغیب دینا",
       ],
     },
   },

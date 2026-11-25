@@ -1,7 +1,7 @@
 export type Lang = "en" | "ur";
 
 const en = {
-  nav: { about: "About", pillars: "Agenda", wards: "Wards", darbar: "Janata Darbar", gallery: "Gallery", press: "Press Room", join: "Join" },
+  nav: { about: "About", pillars: "Public Work", wards: "Wards", darbar: "Janata Darbar", gallery: "Gallery", press: "Press Room", join: "Join" },
   langToggle: "اردو",
   hero: {
     badge: "Joint Secretary · District Srinagar",
@@ -31,7 +31,7 @@ const en = {
     vision: "Vision",
     visionText: "A stronger, safer, and more inclusive society built through unity, responsibility, and positive action.",
   },
-  pillars: { eyebrow: "Our Agenda", title: "Politics for Kashmir, on record." },
+  pillars: { eyebrow: "The Four Pillars", title: "Public work, on record." },
   wards: {
     eyebrow: "Srinagar Ward Tracker",
     title: "Where the work is focused.",
@@ -102,7 +102,7 @@ const en = {
 export type Strings = typeof en;
 
 const ur: Strings = {
-  nav: { about: "تعارف", pillars: "ایجنڈا", wards: "وارڈ", darbar: "جنتا دربار", gallery: "تصاویر", press: "پریس روم", join: "شامل ہوں" },
+  nav: { about: "تعارف", pillars: "عوامی کام", wards: "وارڈ", darbar: "جنتا دربار", gallery: "تصاویر", press: "پریس روم", join: "شامل ہوں" },
   langToggle: "English",
   hero: {
     badge: "جوائنٹ سیکریٹری · ضلع سرینگر",
@@ -132,7 +132,7 @@ const ur: Strings = {
     vision: "وژن",
     visionText: "اتحاد، ذمہ داری اور مثبت عمل کے ذریعے ایک مضبوط، محفوظ اور سب کو ساتھ لے کر چلنے والا معاشرہ۔",
   },
-  pillars: { eyebrow: "ہمارا ایجنڈا", title: "کشمیر کی سیاست، ریکارڈ پر۔" },
+  pillars: { eyebrow: "چار ستون", title: "عوامی خدمت، ریکارڈ پر۔" },
   wards: {
     eyebrow: "سرینگر وارڈ ٹریکر",
     title: "کام کہاں ہو رہا ہے۔",

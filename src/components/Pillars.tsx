@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, Flag, Megaphone, Sparkles, type LucideIcon } from "lucide-react";
+import { ChevronDown, Flag, HandHeart, Megaphone, Sparkles, type LucideIcon } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import { PILLARS, type PillarId } from "../data/pillars";
 import { Section } from "./Section";
@@ -7,7 +7,8 @@ import { Section } from "./Section";
 const META: Record<PillarId, { icon: LucideIcon; span: string; tone: string; accent: string }> = {
   politics: { icon: Flag, span: "md:col-span-4", tone: "bg-ink text-paper", accent: "text-gold" },
   grievances: { icon: Megaphone, span: "md:col-span-2", tone: "bg-gold-tint text-ink", accent: "text-gold" },
-  youth: { icon: Sparkles, span: "md:col-span-6", tone: "bg-forest text-paper", accent: "text-gold" },
+  youth: { icon: Sparkles, span: "md:col-span-2", tone: "bg-forest-tint text-ink", accent: "text-forest" },
+  welfare: { icon: HandHeart, span: "md:col-span-4", tone: "bg-forest text-paper", accent: "text-gold" },
 };
 
 export function Pillars() {

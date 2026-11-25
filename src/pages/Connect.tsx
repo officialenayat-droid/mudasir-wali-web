@@ -29,7 +29,7 @@ export default function Connect() {
       external: true,
     },
     { href: "/#press", label: ur ? "پریس روم" : "Press Room & Latest News", icon: FileText },
-    { href: "/#pillars", label: ur ? "ہمارا ایجنڈا" : "Our Agenda for Srinagar", icon: Users },
+    { href: "/#pillars", label: ur ? "چار ستون" : "The Four Pillars of Public Work", icon: Users },
     { href: SITE.instagramUrl, label: "Instagram", sub: `@${SITE.instagram}`, icon: InstagramIcon, external: true },
   ];
 
