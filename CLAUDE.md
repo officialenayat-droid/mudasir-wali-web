@@ -9,6 +9,11 @@ Mobile-first political/public-leadership site for Mudasir Wali (Joint Secretary,
 - Static SPA. Routing fallbacks: `public/.htaccess` (Hostinger/Apache), `vercel.json` (Vercel), `public/_redirects` (Netlify)
 - `robots.txt` / `sitemap.xml` are generated at build time from `VITE_SITE_URL` (see `vite.config.ts`); host env vars override `.env`
 
+## Deployment
+- **Production:** https://mudasirwali.in — Hostinger, auto-deploys every push to `main` on GitHub (`officialenayat-droid/mudasir-wali-web`) in ~1 min. Host env vars: `VITE_SITE_URL=https://mudasirwali.in`, `VITE_WHATSAPP_NUMBER=919697001313`.
+- **Backup:** https://mudasir-wali.vercel.app — Vercel project `mudasir-wali` (not Git-linked; deploy manually if needed).
+- To ship a change: commit and `git push origin main`, then verify on mudasirwali.in.
+
 ## Commands
 - `npm run dev` — dev server
 - `npm run build` — type-check (`tsc -b`) + production build to `dist/`
