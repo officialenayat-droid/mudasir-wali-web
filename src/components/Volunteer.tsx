@@ -5,6 +5,7 @@ import { LOCALITIES, LOCALITY_GROUP_LABEL, localityName } from "../data/localiti
 import { STRINGS } from "../i18n/strings";
 import { normalizeIndianMobile, whatsappLink } from "../lib/whatsapp";
 import { WhatsAppIcon } from "./icons";
+import { SITE } from "../config/site";
 
 type RoleId = keyof typeof STRINGS.en.roles;
 const ROLES: { id: RoleId; icon: LucideIcon }[] = [
@@ -112,6 +113,12 @@ export function Volunteer() {
           <p className="eyebrow text-accent-soft!">{t.volunteer.eyebrow}</p>
           <h2 id="join-title" className="mt-3 font-serif text-4xl leading-[1.05] sm:text-5xl md:text-6xl">{t.volunteer.title}</h2>
           <p className="mt-4 text-lg text-brand-soft/90">{t.volunteer.lede}</p>
+          <p className="mt-6 text-sm text-brand-soft/90">
+            {t.volunteer.officialMember}{" "}
+            <a href={SITE.partyLinks.join} target="_blank" rel="noopener noreferrer" className="font-semibold text-white underline underline-offset-4 hover:text-accent-soft">
+              {t.volunteer.officialMemberLink} ↗
+            </a>
+          </p>
         </header>
         <div className="rounded-3xl bg-ink/40 p-5 ring-1 ring-white/10 sm:p-8 lg:col-span-7">
           <VolunteerForm />

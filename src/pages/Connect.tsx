@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BadgeCheck, ChevronDown, ExternalLink, FileText, MessageSquareWarning, Users, type LucideIcon } from "lucide-react";
+import { BadgeCheck, ChevronDown, ExternalLink, FileText, Landmark, MessageSquareWarning, Users, type LucideIcon } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import { SITE } from "../config/site";
 import { whatsappLink } from "../lib/whatsapp";
@@ -31,6 +31,7 @@ export default function Connect() {
     },
     { href: "/#press", label: ur ? "پریس روم" : "Press Room & Latest News", icon: FileText },
     { href: "/#pillars", label: ur ? "چار ستون" : "The Four Pillars of Public Work", icon: Users },
+    { href: SITE.partyLinks.website, label: ur ? "جموں و کشمیر اپنی پارٹی" : "J&K Apni Party — official website", sub: "jkapniparty.com", icon: Landmark, external: true },
     { href: SITE.instagramUrl, label: "Instagram", sub: `@${SITE.instagram}`, icon: InstagramIcon, external: true },
   ];
 

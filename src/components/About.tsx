@@ -1,4 +1,5 @@
-import { Compass, Target } from "lucide-react";
+import { Compass, ExternalLink, Globe, Target, UserPlus } from "lucide-react";
+import { SITE } from "../config/site";
 import { useLang } from "../i18n/LanguageContext";
 import { FlagStripe, PartyFlag } from "./PartyFlag";
 
@@ -34,6 +35,30 @@ export function About() {
                 <p className="font-serif text-2xl leading-tight text-ink sm:text-3xl">{a.party}</p>
                 <p className="mt-2 text-sm font-semibold text-brand">{a.partyLeader}</p>
                 <p className="mt-1 text-sm text-slate-600">{a.partyRole}</p>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">{a.partyFounded}</p>
+              </div>
+            </div>
+            <div className="border-t border-slate-200 bg-brand-tint/50 px-6 py-6 sm:px-7">
+              <p className="font-serif text-xl leading-snug text-brand-deep sm:text-2xl">{a.partyMotto}</p>
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-slate-600">{a.partyAgendaTitle}</p>
+              <ul className="mt-2 space-y-1.5">
+                {a.partyAgenda.map((x) => (
+                  <li key={x} className="flex gap-2.5 text-sm text-slate-700">
+                    <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                    {x}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-5 flex flex-wrap items-center gap-2">
+                <a href={SITE.partyLinks.website} target="_blank" rel="noopener noreferrer" className="btn-primary min-h-10 px-4 text-xs">
+                  <Globe className="size-4" aria-hidden="true" /> {a.partyWebsite}
+                </a>
+                <a href={SITE.partyLinks.join} target="_blank" rel="noopener noreferrer" className="btn-accent min-h-10 px-4 text-xs">
+                  <UserPlus className="size-4" aria-hidden="true" /> {a.partyJoin}
+                </a>
+                <a href={SITE.partyLinks.about} target="_blank" rel="noopener noreferrer" className="ms-1 inline-flex items-center gap-1 text-xs text-slate-600 hover:text-brand hover:underline">
+                  {a.partySource} <ExternalLink className="size-3" aria-hidden="true" />
+                </a>
               </div>
             </div>
           </div>

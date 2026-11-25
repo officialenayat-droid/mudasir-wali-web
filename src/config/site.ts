@@ -6,6 +6,16 @@ export const SITE = {
   party: "Jammu & Kashmir Apni Party",
   partyShort: "J&K Apni Party",
   partyPresident: "Syed Mohammad Altaf Bukhari",
+  /** Official J&K Apni Party channels (from jkapniparty.com). */
+  partyLinks: {
+    website: "https://www.jkapniparty.com/",
+    join: "https://www.jkapniparty.com/join-us/",
+    about: "https://www.jkapniparty.com/about-us/",
+    facebook: "https://www.facebook.com/Apnipartyonline/",
+    x: "https://x.com/Apnipartyonline",
+    instagram: "https://www.instagram.com/apnipartyofficial/",
+    youtube: "https://www.youtube.com/apnipartyonline",
+  },
   instagram: "walimudasirr",
   instagramUrl: "https://www.instagram.com/walimudasirr/",
   /** Digits only, international format. Empty → WhatsApp lets the sender pick a contact. */
