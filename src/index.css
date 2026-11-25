@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand tokens */
+  --color-ink: #0f172a;
+  --color-ink-soft: #1e293b;
+  --color-paper: #f8fafc;
+  --color-forest: #065f46;
+  --color-forest-deep: #064e3b;
+  --color-forest-tint: #ecfdf5;
+  --color-gold: #d97706;
+  --color-gold-tint: #fef3c7;
+
+  --font-serif: "Instrument Serif", "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", Inter, system-ui, sans-serif;
+  --font-urdu: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  html[lang="ur"] body {
+    font-family: var(--font-urdu);
+    line-height: 2;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+}
+
+@utility field {
+  @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-ink placeholder:text-slate-400 transition focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20;
+}
+@utility label {
+  @apply mb-1.5 block text-sm font-semibold text-ink;
+}
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold transition active:scale-[0.98] disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-forest text-white hover:bg-forest-deep;
+}
+@utility btn-gold {
+  @apply btn bg-gold text-white hover:bg-amber-700;
+}
+@utility btn-ghost {
+  @apply btn border border-current;
+}
+@utility eyebrow {
+  @apply text-xs font-bold uppercase tracking-[0.2em] text-gold;
+}
+
+/* Unlayered so it beats the font-serif utility when Urdu is active. */
+html[lang="ur"] .font-serif {
+  font-family: "Instrument Serif", var(--font-urdu);
+  line-height: 1.7;
+  letter-spacing: 0;
+}
