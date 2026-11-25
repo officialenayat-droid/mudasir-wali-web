@@ -1,13 +1,32 @@
-export type LocalityId = "shaheed-gunj" | "hazratbal" | "brain-nishat" | "batwara" | "guru-bazar" | "other";
+/** Srinagar district's eight assembly constituencies (2022 delimitation, AC 19–26) plus key localities. */
+export type LocalityId =
+  | "hazratbal" | "khanyar" | "habba-kadal" | "lal-chowk" | "chanapora" | "zadibal" | "eidgah" | "central-shalteng"
+  | "shaheed-gunj" | "brain-nishat" | "batwara" | "guru-bazar"
+  | "other";
 
-export const LOCALITIES: { id: LocalityId; en: string; ur: string }[] = [
-  { id: "shaheed-gunj", en: "Shaheed Gunj", ur: "شہید گنج" },
-  { id: "hazratbal", en: "Hazratbal", ur: "حضرت بل" },
-  { id: "brain-nishat", en: "Brain Nishat", ur: "برین نشاط" },
-  { id: "batwara", en: "Batwara", ur: "بٹوارہ" },
-  { id: "guru-bazar", en: "Guru Bazar", ur: "گرو بازار" },
-  { id: "other", en: "Other area — Kashmir", ur: "دیگر علاقہ — کشمیر" },
+export type LocalityGroup = "constituency" | "locality" | "other";
+
+export const LOCALITIES: { id: LocalityId; en: string; ur: string; group: LocalityGroup; ac?: number }[] = [
+  { id: "hazratbal", en: "Hazratbal", ur: "حضرت بل", group: "constituency", ac: 19 },
+  { id: "khanyar", en: "Khanyar", ur: "خانیار", group: "constituency", ac: 20 },
+  { id: "habba-kadal", en: "Habba Kadal", ur: "حبہ کدل", group: "constituency", ac: 21 },
+  { id: "lal-chowk", en: "Lal Chowk", ur: "لال چوک", group: "constituency", ac: 22 },
+  { id: "chanapora", en: "Chanapora", ur: "چھانہ پورہ", group: "constituency", ac: 23 },
+  { id: "zadibal", en: "Zadibal", ur: "زڈی بل", group: "constituency", ac: 24 },
+  { id: "eidgah", en: "Eidgah", ur: "عیدگاہ", group: "constituency", ac: 25 },
+  { id: "central-shalteng", en: "Central Shalteng", ur: "سینٹرل شالٹینگ", group: "constituency", ac: 26 },
+  { id: "shaheed-gunj", en: "Shaheed Gunj", ur: "شہید گنج", group: "locality" },
+  { id: "brain-nishat", en: "Brain Nishat", ur: "برین نشاط", group: "locality" },
+  { id: "batwara", en: "Batwara", ur: "بٹوارہ", group: "locality" },
+  { id: "guru-bazar", en: "Guru Bazar", ur: "گرو بازار", group: "locality" },
+  { id: "other", en: "Other area — Kashmir", ur: "دیگر علاقہ — کشمیر", group: "other" },
 ];
+
+export const LOCALITY_GROUP_LABEL: Record<LocalityGroup, { en: string; ur: string }> = {
+  constituency: { en: "Srinagar assembly constituencies", ur: "سرینگر کے اسمبلی حلقے" },
+  locality: { en: "Key localities", ur: "اہم علاقے" },
+  other: { en: "Elsewhere", ur: "دیگر" },
+};
 
 export type IssueCategoryId = "roads" | "drainage" | "water-power" | "employment" | "traffic" | "education" | "other";
 

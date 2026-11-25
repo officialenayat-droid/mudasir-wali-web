@@ -41,6 +41,7 @@ Colours are the J&K Apni Party flag (red / white / blue). Shared utilities: `btn
 - Photo captions describe the event only. Never name anyone in a photo unless the client has confirmed who they are.
 - Hazratbal delegation (14 Nov 2026) was led by Mohammad Sidiq Mir; Mudasir Wali was a member — never say he led it. Press notes should carry `sources` links to published coverage.
 - Text colour: small text on light backgrounds uses `accent-deep`/`brand`; on dark (ink/brand) use `accent-soft`/`brand-soft`. Flag red `#DE2910` on dark navy fails WCAG for small text — only use it there for large headings.
+- Ward tracker covers Srinagar district's 8 assembly constituencies (2022 delimitation: AC 19 Hazratbal, 20 Khanyar, 21 Habba Kadal, 22 Lal Chowk, 23 Chanapora, 24 Zadibal, 25 Eidgah, 26 Central Shalteng) plus key localities (`src/data/localities.ts`, `src/data/wards.ts`). Don't map localities to constituencies without a source.
 - Facts only. No invented quotes, dates, statistics or media coverage. Ward "on the ground" items and press notes must be verifiable.
 - Forms never store data; they build a WhatsApp message (`src/lib/whatsapp.ts`). Ticket IDs: `MW-SRN-<year>-<4 chars>`.
 - Use logical CSS properties (`ms-`, `pe-`, `start-`, `text-start`) so RTL works; flip directional icons with `rtl:-scale-x-100`.

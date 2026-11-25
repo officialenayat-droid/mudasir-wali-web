@@ -1,7 +1,7 @@
 import { useId, useState, type FormEvent } from "react";
 import { Megaphone, Users, Vote, type LucideIcon } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
-import { LOCALITIES, localityName } from "../data/localities";
+import { LOCALITIES, LOCALITY_GROUP_LABEL, localityName } from "../data/localities";
 import { STRINGS } from "../i18n/strings";
 import { normalizeIndianMobile, whatsappLink } from "../lib/whatsapp";
 import { WhatsAppIcon } from "./icons";
@@ -78,7 +78,11 @@ export function VolunteerForm({ compact = false }: { compact?: boolean }) {
           <label htmlFor={`${uid}-loc`} className={`label ${labelTone}`}>{t.darbar.locality}</label>
           <select id={`${uid}-loc`} className={`field ${fieldTone}`} value={locality} onChange={(e) => setLocality(e.target.value)}>
             <option value="" className="text-ink">{t.darbar.select}</option>
-            {LOCALITIES.map((l) => <option key={l.id} value={l.id} className="text-ink">{l[lang]}</option>)}
+            {(["constituency", "locality", "other"] as const).map((g) => (
+                      <optgroup key={g} label={LOCALITY_GROUP_LABEL[g][lang]} className="text-ink">
+                        {LOCALITIES.filter((l) => l.group === g).map((l) => <option key={l.id} value={l.id} className="text-ink">{l[lang]}</option>)}
+                      </optgroup>
+                    ))}
           </select>
         </div>
         <div>

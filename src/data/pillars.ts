@@ -42,7 +42,7 @@ export const PILLARS: Pillar[] = [
       points: [
         "Taking up roads, drainage, water and power issues",
         "Janata Darbar portal: every grievance gets a reference ticket",
-        "Focus areas: Shaheed Gunj, Hazratbal, Brain Nishat, Batwara, Guru Bazar",
+        "Covering all eight Srinagar constituencies, from Hazratbal to Central Shalteng",
       ],
     },
     ur: {
@@ -51,7 +51,7 @@ export const PILLARS: Pillar[] = [
       points: [
         "سڑکوں، نکاسی، پانی اور بجلی کے مسائل اٹھانا",
         "جنتا دربار پورٹل: ہر شکایت کا حوالہ نمبر",
-        "ترجیحی علاقے: شہید گنج، حضرت بل، برین نشاط، بٹوارہ، گرو بازار",
+        "سرینگر کے تمام آٹھ حلقے — حضرت بل سے سینٹرل شالٹینگ تک",
       ],
     },
   },

@@ -1,7 +1,7 @@
 import { useEffect, useId, useState, type FormEvent } from "react";
 import { Check, ClipboardCopy, RotateCcw, Ticket } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
-import { ISSUE_CATEGORIES, LOCALITIES, categoryName, localityName } from "../data/localities";
+import { ISSUE_CATEGORIES, LOCALITIES, LOCALITY_GROUP_LABEL, categoryName, localityName } from "../data/localities";
 import { generateTicketId } from "../lib/ticket";
 import { copyText, normalizeIndianMobile, whatsappLink } from "../lib/whatsapp";
 import { PREFILL_EVENT, type GrievancePrefill } from "../lib/prefill";
@@ -99,7 +99,11 @@ export function JanataDarbar() {
                   <label htmlFor={`${uid}-locality`} className="label">{t.darbar.locality}</label>
                   <select {...a11y("locality")} className="field" value={form.locality} onChange={(e) => set("locality")(e.target.value)}>
                     <option value="">{t.darbar.select}</option>
-                    {LOCALITIES.map((l) => <option key={l.id} value={l.id}>{l[lang]}</option>)}
+                    {(["constituency", "locality", "other"] as const).map((g) => (
+                      <optgroup key={g} label={LOCALITY_GROUP_LABEL[g][lang]}>
+                        {LOCALITIES.filter((l) => l.group === g).map((l) => <option key={l.id} value={l.id}>{l[lang]}</option>)}
+                      </optgroup>
+                    ))}
                   </select>
                   {err("locality")}
                 </div>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BriefcaseBusiness, Car, Droplets, GraduationCap, Hammer, MapPin, Megaphone, Plus, Zap, type LucideIcon } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import { WARDS } from "../data/wards";
-import { categoryName, localityName, type IssueCategoryId, type LocalityId } from "../data/localities";
+import { LOCALITIES, categoryName, localityName, type IssueCategoryId, type LocalityGroup } from "../data/localities";
 import { Section } from "./Section";
 import { prefillGrievance } from "../lib/prefill";
 
@@ -20,10 +20,19 @@ const FOCUS_FILTERS: IssueCategoryId[] = ["roads", "drainage", "employment", "tr
 
 export function WardTracker() {
   const { lang, t } = useLang();
-  const [ward, setWard] = useState<LocalityId | "all">("all");
+  const [group, setGroup] = useState<Exclude<LocalityGroup, "other"> | "all">("all");
   const [focus, setFocus] = useState<IssueCategoryId | "all">("all");
 
-  const visible = WARDS.filter((w) => (ward === "all" || w.id === ward) && (focus === "all" || w.focus.includes(focus)));
+  const meta = (id: string) => LOCALITIES.find((l) => l.id === id);
+  const visible = WARDS.filter(
+    (w) => (group === "all" || meta(w.id)?.group === group) && (focus === "all" || w.focus.includes(focus)),
+  );
+  const count = (g: LocalityGroup | "all") => WARDS.filter((w) => g === "all" || meta(w.id)?.group === g).length;
+  const groups = [
+    { id: "all" as const, label: t.wards.all },
+    { id: "constituency" as const, label: t.wards.constituencies },
+    { id: "locality" as const, label: t.wards.localities },
+  ];
 
   const chip = (active: boolean) =>
     `min-h-10 shrink-0 rounded-full border px-4 text-sm font-semibold transition ${
@@ -31,15 +40,12 @@ export function WardTracker() {
     }`;
 
   return (
-    <Section id="wards" eyebrow={t.wards.eyebrow} title={t.wards.title} tone="white">
+    <Section id="wards" eyebrow={t.wards.eyebrow} title={t.wards.title} lede={t.wards.lede} tone="white">
       <div className="space-y-3">
-        <div role="group" aria-label="Filter by locality" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
-          <button type="button" className={chip(ward === "all")} aria-pressed={ward === "all"} onClick={() => setWard("all")}>
-            {t.wards.all}
-          </button>
-          {WARDS.map((w) => (
-            <button key={w.id} type="button" className={chip(ward === w.id)} aria-pressed={ward === w.id} onClick={() => setWard(w.id)}>
-              {localityName(w.id, lang)}
+        <div role="group" aria-label="Filter by area type" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
+          {groups.map((g) => (
+            <button key={g.id} type="button" className={chip(group === g.id)} aria-pressed={group === g.id} onClick={() => setGroup(g.id)}>
+              {g.label} <span className="ms-1 opacity-60">{count(g.id)}</span>
             </button>
           ))}
         </div>
@@ -75,10 +81,19 @@ export function WardTracker() {
                   {localityName(w.id, lang === "en" ? "ur" : "en")}
                 </p>
               </div>
-              <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-accent-tint px-2.5 py-1 text-xs font-semibold text-accent-deep">
-                <MapPin className="size-3" aria-hidden="true" />
-                {w.tagline[lang]}
-              </span>
+              <div className="flex shrink-0 flex-col items-end gap-1.5">
+                {meta(w.id)?.ac && (
+                  <span className="rounded-full bg-brand px-2.5 py-1 text-xs font-bold text-white" dir="ltr">
+                    {t.wards.ac} {meta(w.id)?.ac}
+                  </span>
+                )}
+                {w.tagline && (
+                  <span className="inline-flex items-center gap-1 rounded-full bg-accent-tint px-2.5 py-1 text-xs font-semibold text-accent-deep">
+                    <MapPin className="size-3" aria-hidden="true" />
+                    {w.tagline[lang]}
+                  </span>
+                )}
+              </div>
             </div>
 
             <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">{t.wards.focus}</p>

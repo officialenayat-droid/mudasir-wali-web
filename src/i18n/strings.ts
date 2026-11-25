@@ -38,7 +38,11 @@ const en = {
   wards: {
     eyebrow: "Srinagar Ward Tracker",
     title: "Where the work is focused.",
+    lede: "All eight assembly constituencies of Srinagar district, plus key localities. Tap any area to report an issue there.",
     all: "All areas",
+    constituencies: "Constituencies",
+    localities: "Key localities",
+    ac: "AC",
     focus: "Civic focus",
     allIssues: "All issues",
     updates: "On the ground",
@@ -143,7 +147,11 @@ const ur: Strings = {
   wards: {
     eyebrow: "سرینگر وارڈ ٹریکر",
     title: "کام کہاں ہو رہا ہے۔",
+    lede: "ضلع سرینگر کے تمام آٹھ اسمبلی حلقے اور اہم علاقے۔ کسی بھی علاقے کا مسئلہ درج کرنے کے لیے ٹیپ کریں۔",
     all: "تمام علاقے",
+    constituencies: "اسمبلی حلقے",
+    localities: "اہم علاقے",
+    ac: "حلقہ",
     focus: "شہری ترجیحات",
     allIssues: "تمام مسائل",
     updates: "زمینی کام",
