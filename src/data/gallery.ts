@@ -18,11 +18,13 @@ export const GALLERY: Photo[] = [
   { src: "/photos/outdoor-youth.webp", w: 1200, h: 900, en: "With youth members", ur: "نوجوان اراکین کے ساتھ" },
 ];
 
-/** Short event clips (H.264, faststart). Posters are frames from each clip. */
+/** Event clips from @walimudasirr (H.264, 540×960, faststart). Posters are frames from each clip. */
 export type Clip = { src: string; poster: string; w: number; h: number; en: string; ur: string };
 
 export const VIDEOS: Clip[] = [
-  { src: "/videos/joining-event.mp4", poster: "/videos/joining-event.jpg", w: 1280, h: 720, en: "Youth joining event at the party office", ur: "پارٹی دفتر میں نوجوانوں کی شمولیتی تقریب" },
-  { src: "/videos/new-members.mp4", poster: "/videos/new-members.jpg", w: 540, h: 720, en: "New members at the joining event", ur: "شمولیتی تقریب میں نئے اراکین" },
-  { src: "/videos/arrivals.mp4", poster: "/videos/arrivals.jpg", w: 540, h: 960, en: "Arriving at a party event", ur: "پارٹی تقریب میں آمد" },
+  { src: "/videos/induction.mp4", poster: "/videos/induction.jpg", w: 540, h: 960, en: "Induction into J&K Apni Party", ur: "جموں و کشمیر اپنی پارٹی میں شمولیت" },
+  { src: "/videos/joining-day.mp4", poster: "/videos/joining-day.jpg", w: 540, h: 960, en: "Joining day — party meeting and media interaction", ur: "شمولیت کا دن — پارٹی اجلاس اور میڈیا سے گفتگو" },
+  { src: "/videos/addressing-workers.mp4", poster: "/videos/addressing-workers.jpg", w: 540, h: 960, en: "Addressing party workers and welcoming youth", ur: "پارٹی کارکنوں سے خطاب اور نوجوانوں کا استقبال" },
+  { src: "/videos/public-gathering.mp4", poster: "/videos/public-gathering.jpg", w: 540, h: 960, en: "Public gathering with party workers", ur: "پارٹی کارکنوں کے ساتھ عوامی اجتماع" },
+  { src: "/videos/with-residents.mp4", poster: "/videos/with-residents.jpg", w: 540, h: 960, en: "On the ground with residents and the media", ur: "عوام اور میڈیا کے ساتھ زمینی سطح پر" },
 ];

@@ -34,9 +34,9 @@ export function Gallery() {
   return (
     <Section id="gallery" eyebrow={t.gallery.eyebrow} title={t.gallery.title} tone="white">
       <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-slate-600">{t.gallery.videos}</h3>
-      <ul className="mb-12 grid grid-cols-2 items-start gap-3 sm:gap-4 md:grid-cols-4">
-        {VIDEOS.map((v, i) => (
-          <li key={v.src} className={i === 0 ? "col-span-2" : ""}>
+      <ul className="mb-12 grid grid-cols-2 items-start gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-5">
+        {VIDEOS.map((v) => (
+          <li key={v.src}>
             <figure>
               <video
                 controls
