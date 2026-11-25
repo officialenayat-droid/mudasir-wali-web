@@ -27,4 +27,9 @@ export const VIDEOS: Clip[] = [
   { src: "/videos/addressing-workers.mp4", poster: "/videos/addressing-workers.jpg", w: 540, h: 960, en: "Addressing party workers and welcoming youth", ur: "پارٹی کارکنوں سے خطاب اور نوجوانوں کا استقبال" },
   { src: "/videos/public-gathering.mp4", poster: "/videos/public-gathering.jpg", w: 540, h: 960, en: "Public gathering with party workers", ur: "پارٹی کارکنوں کے ساتھ عوامی اجتماع" },
   { src: "/videos/with-residents.mp4", poster: "/videos/with-residents.jpg", w: 540, h: 960, en: "On the ground with residents and the media", ur: "عوام اور میڈیا کے ساتھ زمینی سطح پر" },
+  { src: "/videos/party-office-address.mp4", poster: "/videos/party-office-address.jpg", w: 540, h: 960, en: "Arrival and address at the party office", ur: "پارٹی دفتر آمد اور خطاب" },
+  { src: "/videos/youth-joining.mp4", poster: "/videos/youth-joining.jpg", w: 540, h: 960, en: "Youth joining the party", ur: "نوجوانوں کی پارٹی میں شمولیت" },
+  { src: "/videos/outreach.mp4", poster: "/videos/outreach.jpg", w: 540, h: 960, en: "Neighbourhood outreach and welcoming new members", ur: "محلوں میں رابطہ مہم اور نئے اراکین کا استقبال" },
+  { src: "/videos/large-gathering.mp4", poster: "/videos/large-gathering.jpg", w: 540, h: 960, en: "Large public gathering at a party event", ur: "پارٹی تقریب میں بڑا عوامی اجتماع" },
+  { src: "/videos/on-stage.mp4", poster: "/videos/on-stage.jpg", w: 540, h: 960, en: "On stage at a public event", ur: "عوامی تقریب میں اسٹیج پر" },
 ];
