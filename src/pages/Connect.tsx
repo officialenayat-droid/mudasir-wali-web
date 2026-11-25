@@ -5,6 +5,7 @@ import { SITE } from "../config/site";
 import { whatsappLink } from "../lib/whatsapp";
 import { Portrait } from "../components/Portrait";
 import { LangToggle } from "../components/LangToggle";
+import { FlagStripe, PartyFlag } from "../components/PartyFlag";
 import { VolunteerForm } from "../components/Volunteer";
 import { InstagramIcon, WhatsAppIcon } from "../components/icons";
 
@@ -35,6 +36,7 @@ export default function Connect() {
 
   return (
     <div className="relative min-h-dvh overflow-hidden bg-ink text-paper">
+      <FlagStripe className="relative z-10" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(8,57,156,0.55),transparent_65%)]" aria-hidden="true" />
       <main className="relative mx-auto flex max-w-md flex-col px-4 pb-12 pt-6">
         <div className="flex justify-end">
@@ -51,7 +53,10 @@ export default function Connect() {
             <BadgeCheck className="size-4 text-accent" aria-hidden="true" />
             {t.hero.badge}
           </p>
-          <p className="mt-1 text-xs uppercase tracking-[0.18em] text-slate-400">{t.hero.party}</p>
+          <p className="mt-4 flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
+            <PartyFlag className="h-7" eager />
+            {t.hero.party}
+          </p>
           <p className="mt-4 font-serif text-2xl italic text-accent">
             {t.hero.title1} {t.hero.title2}
           </p>

@@ -2,6 +2,7 @@ import { ArrowRight, BadgeCheck, MapPin } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import { DalBackdrop } from "./DalBackdrop";
 import { Portrait } from "./Portrait";
+import { PartyFlag } from "./PartyFlag";
 
 export function Hero() {
   const { t } = useLang();
@@ -16,7 +17,10 @@ export function Hero() {
             <BadgeCheck className="size-4 shrink-0 text-accent" aria-hidden="true" />
             {t.hero.badge}
           </p>
-          <p className="mt-4 text-sm font-medium uppercase tracking-[0.18em] text-slate-400">{t.hero.party}</p>
+          <p className="mt-5 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
+            <PartyFlag className="h-9" eager />
+            {t.hero.party}
+          </p>
 
           <h1 className="mt-5 font-serif text-[3.25rem] leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
             <span className="sr-only">Mudasir Wali — </span>

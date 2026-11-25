@@ -33,6 +33,7 @@ Colours are the J&K Apni Party flag (red / white / blue). Shared utilities: `btn
 - `src/i18n/strings.ts` — all UI copy in `en` + `ur`; `LanguageContext` sets `<html lang dir>`; `?lang=ur` deep-links Urdu
 - `index.html` — SEO meta, OpenGraph, JSON-LD (`Person`, `PoliticalParty`, `Organization`, `WebSite`)
 - `public/photos/` — WebP photos (≤1200px) used by `src/data/gallery.ts`, pillars and press notes; `portrait.webp` is the main portrait (confirmed by the client: photo 2 of the supplied set)
+- `public/brand/` — official J&K Apni Party flag (client-supplied); use via `<PartyFlag>` / `<FlagStripe>` in `src/components/PartyFlag.tsx` (header, hero, About party card, footer, /connect, share image)
 - `public/` — `portrait.jpg` (JSON-LD image), `og-image.jpg` (1200×630 share card), `robots.txt`, `sitemap.xml`
 
 ## Rules

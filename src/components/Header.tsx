@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import { LangToggle } from "./LangToggle";
+import { FlagStripe, PartyFlag } from "./PartyFlag";
 
 export function Header() {
   const { t } = useLang();
@@ -30,10 +31,11 @@ export function Header() {
         scrolled || open ? "bg-ink/95 shadow-lg shadow-black/10 backdrop-blur" : "bg-transparent"
       }`}
     >
+      <FlagStripe />
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <a href="/" className="flex items-baseline gap-2" aria-label="Mudasir Wali — home">
+        <a href="/" className="flex items-center gap-2.5" aria-label="Mudasir Wali — home">
+          <PartyFlag className="h-7" eager />
           <span className="font-serif text-2xl leading-none">Mudasir Wali</span>
-          <span className="hidden h-1.5 w-1.5 rounded-full bg-accent sm:block" aria-hidden="true" />
         </a>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 text-sm font-medium md:flex">

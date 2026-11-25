@@ -1,5 +1,6 @@
 import { Compass, Target } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
+import { FlagStripe, PartyFlag } from "./PartyFlag";
 
 /** Bio, mission and vision — text supplied by the client. */
 export function About() {
@@ -24,6 +25,17 @@ export function About() {
             {a.bio.map((p) => (
               <p key={p}>{p}</p>
             ))}
+          </div>
+          <div className="mt-10 overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
+            <FlagStripe />
+            <div className="flex flex-col gap-5 p-6 sm:flex-row sm:items-center sm:p-7">
+              <PartyFlag className="h-20 sm:h-24" />
+              <div>
+                <p className="font-serif text-2xl leading-tight text-ink sm:text-3xl">{a.party}</p>
+                <p className="mt-2 text-sm font-semibold text-brand">{a.partyLeader}</p>
+                <p className="mt-1 text-sm text-slate-600">{a.partyRole}</p>
+              </div>
+            </div>
           </div>
         </div>
 
