@@ -122,7 +122,7 @@ function Sources({ note, dark = false }: { note: PressNote; dark?: boolean }) {
     <p className={`mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm ${dark ? "text-slate-400" : "text-slate-500"}`}>
       <span>As reported by</span>
       {note.sources.map((s) => (
-        <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" className={`relative z-10 inline-flex items-center gap-1 font-semibold underline-offset-4 hover:underline ${dark ? "text-paper" : "text-brand"}`}>
+        <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" className={`relative z-10 inline-flex min-h-11 items-center gap-1 font-semibold underline-offset-4 hover:underline ${dark ? "text-paper" : "text-brand"}`}>
           {s.name} <ExternalLink className="size-3" aria-hidden="true" />
         </a>
       ))}

@@ -115,7 +115,7 @@ export function Volunteer() {
           <p className="mt-4 text-lg text-brand-soft/90">{t.volunteer.lede}</p>
           <p className="mt-6 text-sm text-brand-soft/90">
             {t.volunteer.officialMember}{" "}
-            <a href={SITE.partyLinks.join} target="_blank" rel="noopener noreferrer" className="font-semibold text-white underline underline-offset-4 hover:text-accent-soft">
+            <a href={SITE.partyLinks.join} target="_blank" rel="noopener noreferrer" className="inline-block py-1.5 font-semibold text-white underline underline-offset-4 hover:text-accent-soft">
               {t.volunteer.officialMemberLink} ↗
             </a>
           </p>

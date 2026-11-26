@@ -33,10 +33,12 @@ export function Gallery() {
 
   return (
     <Section id="gallery" eyebrow={t.gallery.eyebrow} title={t.gallery.title} tone="white">
-      <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-slate-600">{t.gallery.videos}</h3>
-      <ul className="mb-12 grid grid-cols-2 items-start gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-5">
+      <h3 className="mb-4 flex items-baseline justify-between text-xs font-bold uppercase tracking-[0.18em] text-slate-600">
+        {t.gallery.videos} <span className="font-medium normal-case tracking-normal text-slate-500 sm:hidden">{lang === "en" ? `${VIDEOS.length} videos · swipe →` : `${VIDEOS.length} ویڈیوز · سوائپ کریں ←`}</span>
+      </h3>
+      <ul className="-mx-4 mb-12 flex snap-x snap-mandatory items-start gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:snap-none sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-5 [&::-webkit-scrollbar]:hidden">
         {VIDEOS.map((v) => (
-          <li key={v.src}>
+          <li key={v.src} className="w-[62%] shrink-0 snap-start sm:w-auto">
             <figure>
               <video
                 controls

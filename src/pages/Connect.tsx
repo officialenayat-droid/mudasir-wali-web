@@ -103,7 +103,7 @@ export default function Connect() {
         </nav>
 
         <footer className="mt-10 text-center text-xs text-slate-500">
-          <a href="/" className="hover:text-paper">{SITE.url.replace(/^https?:\/\//, "")}</a>
+          <a href="/" className="inline-flex min-h-11 items-center px-3 hover:text-paper">{SITE.url.replace(/^https?:\/\//, "")}</a>
         </footer>
       </main>
     </div>

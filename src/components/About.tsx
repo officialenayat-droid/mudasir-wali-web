@@ -30,7 +30,7 @@ export function About() {
           <div className="mt-10 overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200">
             <FlagStripe />
             <div className="flex flex-col gap-5 p-6 sm:flex-row sm:items-center sm:p-7">
-              <PartyFlag className="h-20 sm:h-24" />
+              <PartyFlag className="h-20 self-start sm:h-24" />
               <div>
                 <p className="font-serif text-2xl leading-tight text-ink sm:text-3xl">{a.party}</p>
                 <p className="mt-2 text-sm font-semibold text-brand">{a.partyLeader}</p>
@@ -56,7 +56,7 @@ export function About() {
                 <a href={SITE.partyLinks.join} target="_blank" rel="noopener noreferrer" className="btn-accent min-h-10 px-4 text-xs">
                   <UserPlus className="size-4" aria-hidden="true" /> {a.partyJoin}
                 </a>
-                <a href={SITE.partyLinks.about} target="_blank" rel="noopener noreferrer" className="ms-1 inline-flex items-center gap-1 text-xs text-slate-600 hover:text-brand hover:underline">
+                <a href={SITE.partyLinks.about} target="_blank" rel="noopener noreferrer" className="ms-1 inline-flex min-h-11 items-center gap-1 text-xs text-slate-600 hover:text-brand hover:underline">
                   {a.partySource} <ExternalLink className="size-3" aria-hidden="true" />
                 </a>
               </div>

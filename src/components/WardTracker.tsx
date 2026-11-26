@@ -71,32 +71,34 @@ export function WardTracker() {
         </div>
       </div>
 
-      <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite">
+      <p className="mt-6 text-xs text-slate-500 sm:hidden" aria-hidden="true">
+        {lang === "en" ? `Swipe to see all ${visible.length} areas →` : `تمام ${visible.length} علاقے دیکھنے کے لیے سوائپ کریں ←`}
+      </p>
+      <ul
+        className="-mx-4 mt-3 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:mx-0 sm:mt-8 sm:grid sm:snap-none sm:grid-cols-2 sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3 [&::-webkit-scrollbar]:hidden"
+        aria-live="polite"
+      >
         {visible.map((w) => (
-          <li key={w.id} className="flex flex-col rounded-3xl border border-slate-200 bg-paper p-6">
+          <li key={w.id} className="flex w-[84%] shrink-0 snap-start flex-col rounded-3xl border border-slate-200 bg-paper p-5 sm:w-auto sm:p-6">
             <div className="flex items-start justify-between gap-3">
-              <div>
-                <h3 className="font-serif text-3xl leading-tight">{localityName(w.id, lang)}</h3>
-                <p className="mt-1 text-sm text-slate-500" lang={lang === "en" ? "ur" : "en"}>
-                  {localityName(w.id, lang === "en" ? "ur" : "en")}
-                </p>
-              </div>
-              <div className="flex shrink-0 flex-col items-end gap-1.5">
-                {meta(w.id)?.ac && (
-                  <span className="rounded-full bg-brand px-2.5 py-1 text-xs font-bold text-white" dir="ltr">
-                    {t.wards.ac} {meta(w.id)?.ac}
-                  </span>
-                )}
-                {w.tagline && (
-                  <span className="inline-flex items-center gap-1 rounded-full bg-accent-tint px-2.5 py-1 text-xs font-semibold text-accent-deep">
-                    <MapPin className="size-3" aria-hidden="true" />
-                    {w.tagline[lang]}
-                  </span>
-                )}
-              </div>
+              <h3 className="min-w-0 font-serif text-3xl leading-tight">{localityName(w.id, lang)}</h3>
+              {meta(w.id)?.ac && (
+                <span className="mt-1 shrink-0 rounded-full bg-brand px-2.5 py-1 text-xs font-bold text-white" dir="ltr">
+                  {t.wards.ac} {meta(w.id)?.ac}
+                </span>
+              )}
             </div>
+            <p className="mt-1 text-sm text-slate-500" lang={lang === "en" ? "ur" : "en"}>
+              {localityName(w.id, lang === "en" ? "ur" : "en")}
+            </p>
+            {w.tagline && (
+              <span className="mt-3 inline-flex items-center gap-1 self-start rounded-full bg-accent-tint px-2.5 py-1 text-xs font-semibold text-accent-deep">
+                <MapPin className="size-3" aria-hidden="true" />
+                {w.tagline[lang]}
+              </span>
+            )}
 
-            <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">{t.wards.focus}</p>
+            <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">{t.wards.focus}</p>
             <ul className="mt-2 flex flex-wrap gap-1.5">
               {w.focus.map((c) => {
                 const Icon = CAT_ICON[c];
