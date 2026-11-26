@@ -16,10 +16,9 @@ const CIVIC: IssueCategoryId[] = ["roads", "drainage", "water-power", "employmen
 export const WARDS: Ward[] = [
   {
     id: "hazratbal",
-    tagline: { en: "Delegation & convention", ur: "وفد اور کنونشن" },
+    tagline: { en: "Workers' convention", ur: "کارکنوں کا کنونشن" },
     focus: ["roads", "drainage", "water-power", "employment"],
     onGround: [
-      { en: "Nov 2026 — part of the Apni Party delegation from Hazratbal that raised residents' grievances with party president Altaf Bukhari.", ur: "نومبر ۲۰۲۶ — حضرت بل کے اپنی پارٹی وفد میں شامل جس نے پارٹی صدر الطاف بخاری کے سامنے عوامی مسائل اٹھائے۔" },
       { en: "Jul 2026 — present at the Apni Party workers' convention at Hazratbal.", ur: "جولائی ۲۰۲۶ — حضرت بل میں اپنی پارٹی کارکنوں کے کنونشن میں شرکت۔" },
     ],
   },
