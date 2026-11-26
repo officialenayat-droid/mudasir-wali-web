@@ -46,7 +46,7 @@ export function PressRoom() {
   return (
     <Section id="press" eyebrow={t.press.eyebrow} title={t.press.title} lede={t.press.lede} tone="ink">
       <div className="grid items-start gap-4 lg:grid-cols-2">
-        <article className="flex flex-col rounded-3xl bg-paper p-6 text-ink sm:p-8">
+        <article className={`flex flex-col rounded-3xl bg-paper p-6 text-ink sm:p-8 ${rest.length === 0 ? "lg:col-span-2 lg:mx-auto lg:max-w-3xl" : ""}`}>
           {lead.image && (
             <img src={lead.image.src} alt={lead.image.alt} loading="lazy" className="-mx-2 -mt-2 mb-6 aspect-[16/9] w-[calc(100%+1rem)] rounded-2xl object-cover sm:-mx-4 sm:-mt-4 sm:w-[calc(100%+2rem)]" />
           )}

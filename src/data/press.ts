@@ -16,22 +16,6 @@ export type PressNote = {
 
 export const PRESS_NOTES: PressNote[] = [
   {
-    id: "hazratbal-delegation-nov-2026",
-    dateLabel: "14 Nov 2026",
-    category: "Civic",
-    title: "Hazratbal delegation, including Mudasir Wali, raises public grievances with Altaf Bukhari",
-    dek: "Party president assures the delegation that the issues will be taken up with the concerned authorities.",
-    body: [
-      "SRINAGAR — A delegation of Apni Party leaders and workers from the Hazratbal constituency, led by constituency in-charge Mohammad Sidiq Mir, called on party president Syed Mohammad Altaf Bukhari at the party headquarters in Srinagar on 14 November 2026. Mudasir Wali was part of the delegation.",
-      "The delegation raised residents' grievances and organisational matters concerning the constituency. Bukhari assured them that the issues would be taken up with the concerned authorities.",
-      "Residents with further grievances can register them through the Janata Darbar portal on this website, which issues a reference ticket for follow-up.",
-    ],
-    sources: [
-      { name: "Rising Kashmir", url: "https://risingkashmir.com/politics/apni-party-leaders-flag-hazratbal-grievances-12810031" },
-      { name: "Greater Kashmir", url: "https://www.greaterkashmir.com/politics/altaf-bukhari-meets-party-delegation-from-hazratbal-discusses-public-issues-12810423" },
-    ],
-  },
-  {
     id: "apni-party-induction-2026",
     dateLabel: "7 May 2026",
     category: "Politics",

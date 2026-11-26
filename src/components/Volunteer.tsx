@@ -79,7 +79,7 @@ export function VolunteerForm({ compact = false }: { compact?: boolean }) {
           <label htmlFor={`${uid}-loc`} className={`label ${labelTone}`}>{t.darbar.locality}</label>
           <select id={`${uid}-loc`} className={`field ${fieldTone}`} value={locality} onChange={(e) => setLocality(e.target.value)}>
             <option value="" className="text-ink">{t.darbar.select}</option>
-            {(["constituency", "locality", "other"] as const).map((g) => (
+            {(["constituency", "other"] as const).map((g) => (
                       <optgroup key={g} label={LOCALITY_GROUP_LABEL[g][lang]} className="text-ink">
                         {LOCALITIES.filter((l) => l.group === g).map((l) => <option key={l.id} value={l.id} className="text-ink">{l[lang]}</option>)}
                       </optgroup>

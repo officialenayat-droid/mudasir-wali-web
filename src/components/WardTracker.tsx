@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BriefcaseBusiness, Car, Droplets, GraduationCap, Hammer, MapPin, Megaphone, Plus, Zap, type LucideIcon } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import { WARDS } from "../data/wards";
-import { LOCALITIES, categoryName, localityName, type IssueCategoryId, type LocalityGroup } from "../data/localities";
+import { LOCALITIES, categoryName, localityName, type IssueCategoryId } from "../data/localities";
 import { Section } from "./Section";
 import { prefillGrievance } from "../lib/prefill";
 
@@ -20,35 +20,14 @@ const FOCUS_FILTERS: IssueCategoryId[] = ["roads", "drainage", "employment", "tr
 
 export function WardTracker() {
   const { lang, t } = useLang();
-  const [group, setGroup] = useState<Exclude<LocalityGroup, "other"> | "all">("all");
   const [focus, setFocus] = useState<IssueCategoryId | "all">("all");
 
   const meta = (id: string) => LOCALITIES.find((l) => l.id === id);
-  const visible = WARDS.filter(
-    (w) => (group === "all" || meta(w.id)?.group === group) && (focus === "all" || w.focus.includes(focus)),
-  );
-  const count = (g: LocalityGroup | "all") => WARDS.filter((w) => g === "all" || meta(w.id)?.group === g).length;
-  const groups = [
-    { id: "all" as const, label: t.wards.all },
-    { id: "constituency" as const, label: t.wards.constituencies },
-    { id: "locality" as const, label: t.wards.localities },
-  ];
-
-  const chip = (active: boolean) =>
-    `min-h-10 shrink-0 rounded-full border px-4 text-sm font-semibold transition ${
-      active ? "border-ink bg-ink text-paper" : "border-slate-300 bg-white text-slate-700 hover:border-ink"
-    }`;
+  const visible = WARDS.filter((w) => focus === "all" || w.focus.includes(focus));
 
   return (
     <Section id="wards" eyebrow={t.wards.eyebrow} title={t.wards.title} lede={t.wards.lede} tone="white">
       <div className="space-y-3">
-        <div role="group" aria-label="Filter by area type" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
-          {groups.map((g) => (
-            <button key={g.id} type="button" className={chip(group === g.id)} aria-pressed={group === g.id} onClick={() => setGroup(g.id)}>
-              {g.label} <span className="ms-1 opacity-60">{count(g.id)}</span>
-            </button>
-          ))}
-        </div>
         <div role="group" aria-label="Filter by civic focus" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
           {(["all", ...FOCUS_FILTERS] as const).map((f) => {
             const Icon = f === "all" ? null : CAT_ICON[f];
@@ -72,7 +51,7 @@ export function WardTracker() {
       </div>
 
       <p className="mt-6 text-xs text-slate-500 sm:hidden" aria-hidden="true">
-        {lang === "en" ? `Swipe to see all ${visible.length} areas →` : `تمام ${visible.length} علاقے دیکھنے کے لیے سوائپ کریں ←`}
+        {lang === "en" ? `Swipe to see all ${visible.length} constituencies →` : `تمام ${visible.length} حلقے دیکھنے کے لیے سوائپ کریں ←`}
       </p>
       <ul
         className="-mx-4 mt-3 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:mx-0 sm:mt-8 sm:grid sm:snap-none sm:grid-cols-2 sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3 [&::-webkit-scrollbar]:hidden"

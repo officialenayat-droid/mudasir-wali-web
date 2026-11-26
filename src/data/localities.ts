@@ -1,10 +1,9 @@
-/** Srinagar district's eight assembly constituencies (2022 delimitation, AC 19–26) plus key localities. */
+/** Srinagar district's eight assembly constituencies (2022 delimitation, AC 19–26). */
 export type LocalityId =
   | "hazratbal" | "khanyar" | "habba-kadal" | "lal-chowk" | "chanapora" | "zadibal" | "eidgah" | "central-shalteng"
-  | "shaheed-gunj" | "brain-nishat" | "batwara" | "guru-bazar"
   | "other";
 
-export type LocalityGroup = "constituency" | "locality" | "other";
+export type LocalityGroup = "constituency" | "other";
 
 export const LOCALITIES: { id: LocalityId; en: string; ur: string; group: LocalityGroup; ac?: number }[] = [
   { id: "hazratbal", en: "Hazratbal", ur: "حضرت بل", group: "constituency", ac: 19 },
@@ -15,16 +14,11 @@ export const LOCALITIES: { id: LocalityId; en: string; ur: string; group: Locali
   { id: "zadibal", en: "Zadibal", ur: "زڈی بل", group: "constituency", ac: 24 },
   { id: "eidgah", en: "Eidgah", ur: "عیدگاہ", group: "constituency", ac: 25 },
   { id: "central-shalteng", en: "Central Shalteng", ur: "سینٹرل شالٹینگ", group: "constituency", ac: 26 },
-  { id: "shaheed-gunj", en: "Shaheed Gunj", ur: "شہید گنج", group: "locality" },
-  { id: "brain-nishat", en: "Brain Nishat", ur: "برین نشاط", group: "locality" },
-  { id: "batwara", en: "Batwara", ur: "بٹوارہ", group: "locality" },
-  { id: "guru-bazar", en: "Guru Bazar", ur: "گرو بازار", group: "locality" },
   { id: "other", en: "Other area — Kashmir", ur: "دیگر علاقہ — کشمیر", group: "other" },
 ];
 
 export const LOCALITY_GROUP_LABEL: Record<LocalityGroup, { en: string; ur: string }> = {
   constituency: { en: "Srinagar assembly constituencies", ur: "سرینگر کے اسمبلی حلقے" },
-  locality: { en: "Key localities", ur: "اہم علاقے" },
   other: { en: "Elsewhere", ur: "دیگر" },
 };
 

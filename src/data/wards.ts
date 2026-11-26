@@ -37,15 +37,4 @@ export const WARDS: Ward[] = [
   },
   { id: "eidgah", focus: CIVIC, onGround: [] },
   { id: "central-shalteng", focus: CIVIC, onGround: [] },
-  {
-    id: "shaheed-gunj",
-    tagline: { en: "Home locality", ur: "آبائی علاقہ" },
-    focus: ["roads", "drainage", "employment", "traffic"],
-    onGround: [
-      { en: "Home base for youth outreach and the Janata Darbar helpline.", ur: "نوجوانوں سے رابطے اور جنتا دربار ہیلپ لائن کا مرکز۔" },
-    ],
-  },
-  { id: "brain-nishat", focus: ["roads", "traffic", "employment", "drainage"], onGround: [] },
-  { id: "batwara", focus: ["drainage", "roads", "employment", "traffic"], onGround: [] },
-  { id: "guru-bazar", focus: ["traffic", "roads", "drainage", "employment"], onGround: [] },
 ];
